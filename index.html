@@ -1,0 +1,1968 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Innovation & Incubation MCQ Practice</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+<style>
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --card-hover: #fafbfc;
+  --ink: #1c2230;
+  --mute: #6b7385;
+  --line: #e1e4ea;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --ok: #16a34a;
+  --okbg: #e6f7ec;
+  --okborder: #86efac;
+  --bad: #dc2626;
+  --badbg: #fef2f2;
+  --badborder: #fca5a5;
+  --warn: #d97706;
+  --warnbg: #fffbeb;
+  --warnborder: #fcd34d;
+  --star: #f59e0b;
+  --shadow: 0 4px 14px rgba(0,0,0,0.05);
+  --radius: 12px;
+}
+
+[data-theme="dark"] {
+  --bg: #111827;
+  --card: #1f2937;
+  --card-hover: #283548;
+  --ink: #f3f4f6;
+  --mute: #9ca3af;
+  --line: #374151;
+  --accent: #60a5fa;
+  --accent-hover: #3b82f6;
+  --accent-soft: rgba(96, 165, 250, 0.14);
+  --ok: #4ade80;
+  --okbg: #143522;
+  --okborder: #1e5a34;
+  --bad: #f87171;
+  --badbg: #3c1a1e;
+  --badborder: #6d252b;
+  --warn: #fbbf24;
+  --warnbg: #382910;
+  --warnborder: #855d14;
+  --star: #fbbf24;
+  --shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111827;
+    --card: #1f2937;
+    --card-hover: #283548;
+    --ink: #f3f4f6;
+    --mute: #9ca3af;
+    --line: #374151;
+    --accent: #60a5fa;
+    --accent-hover: #3b82f6;
+    --accent-soft: rgba(96, 165, 250, 0.14);
+    --ok: #4ade80;
+    --okbg: #143522;
+    --okborder: #1e5a34;
+    --bad: #f87171;
+    --badbg: #3c1a1e;
+    --badborder: #6d252b;
+    --warn: #fbbf24;
+    --warnbg: #382910;
+    --warnborder: #855d14;
+    --star: #fbbf24;
+    --shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 24px 18px 80px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  font-size: 30px;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.subhead {
+  font-size: 13px;
+  color: var(--mute);
+  margin-top: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  transition: border-color 0.2s;
+}
+
+button {
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+button:hover {
+  border-color: var(--accent);
+  background: var(--card-hover);
+}
+
+button.primary {
+  background: var(--accent);
+  color: #ffffff !important;
+  border-color: var(--accent);
+}
+
+button.primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+button.danger {
+  color: var(--bad);
+  border-color: var(--line);
+}
+
+button.danger:hover {
+  background: var(--badbg);
+  border-color: var(--bad);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-sm {
+  padding: 5px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.nav-btn.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  margin-left: 4px;
+}
+
+.badge.warn {
+  background: var(--bad);
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.stat {
+  text-align: center;
+  padding: 14px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.stat b {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.stat span {
+  color: var(--mute);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Modes Grid */
+.modes {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.mode div {
+  flex: 1;
+}
+
+.mode b {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.mode small {
+  color: var(--mute);
+  font-size: 13px;
+  font-weight: normal;
+  display: block;
+}
+
+.mode.primary small {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* Question Area */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--mute);
+  font-size: 13px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.meta-tags {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.bar {
+  height: 8px;
+  background: var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.q {
+  font-size: 18.5px;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 6px 0 16px;
+  color: var(--ink);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+
+
+.opts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-size: 15.5px;
+  line-height: 1.45;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.opt:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+.opt.selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.chkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
+  border: 2px solid var(--line);
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: transparent;
+  background: var(--card);
+  margin-top: 1px;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.opt.selected .chkbox {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.opt .k {
+  font-weight: 700;
+  color: var(--mute);
+  min-width: 22px;
+  font-size: 14px;
+  padding-top: 1px;
+}
+
+.opt .text {
+  flex: 1;
+}
+
+.opt .icon {
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: 700;
+  display: none;
+}
+
+.opt.right {
+  background: var(--okbg) !important;
+  border-color: var(--okborder) !important;
+  color: var(--ink) !important;
+}
+
+.opt.right .k {
+  color: var(--ok) !important;
+}
+
+.opt.right .icon {
+  display: inline-block;
+  color: var(--ok);
+}
+
+.opt.wrong {
+  background: var(--badbg) !important;
+  border-color: var(--badborder) !important;
+  color: var(--ink) !important;
+}
+
+.opt.wrong .k {
+  color: var(--bad) !important;
+}
+
+.opt.wrong .icon {
+  display: inline-block;
+  color: var(--bad);
+}
+
+.opt.missed {
+  border-color: var(--warnborder) !important;
+  background: var(--warnbg) !important;
+}
+
+.opt.missed .k {
+  color: var(--warn) !important;
+}
+
+.opt.missed .icon {
+  display: inline-block;
+  color: var(--warn);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.expl {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 8px 8px 0;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.expl b {
+  color: var(--accent);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 9px;
+  border-radius: 99px;
+  border: 1px solid var(--line);
+  color: var(--mute);
+}
+
+.tag.topic {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: transparent;
+  font-weight: 600;
+}
+
+.tag.multi {
+  background: var(--warnbg);
+  color: var(--warn);
+  border-color: var(--warnborder);
+  font-weight: 700;
+}
+
+.tag.weak {
+  color: var(--bad);
+  border-color: var(--badborder);
+  background: var(--badbg);
+}
+
+.tag.ok {
+  color: var(--ok);
+  border-color: var(--okborder);
+  background: var(--okbg);
+}
+
+.tag.star {
+  color: var(--star);
+  border-color: var(--star);
+  background: var(--warnbg);
+}
+
+.tag.auto {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* Auto-Advance Banner */
+.auto-advance-bar {
+  position: relative;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 14px;
+  padding: 8px 12px;
+}
+
+.auto-advance-fill {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  background: rgba(37, 99, 235, 0.18);
+  width: 0%;
+  pointer-events: none;
+}
+
+.auto-advance-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+td, th {
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  color: var(--mute);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+tr:hover td {
+  background: var(--card-hover);
+}
+
+/* Forms */
+textarea {
+  width: 100%;
+  min-height: 220px;
+  font: 13px/1.5 Consolas, Monaco, monospace;
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  resize: vertical;
+}
+
+select, input[type="text"], input[type="search"] {
+  font: inherit;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mute { color: var(--mute); }
+.pct { font-weight: 700; color: var(--accent); }
+
+/* Star Button */
+.star-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 4px 6px;
+  cursor: pointer;
+  color: var(--mute);
+  line-height: 1;
+  transition: transform 0.15s, color 0.15s;
+}
+
+.star-btn:hover {
+  transform: scale(1.15);
+  color: var(--star);
+  background: transparent;
+}
+
+.star-btn.starred {
+  color: var(--star);
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  user-select: none;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-track {
+  width: 34px;
+  height: 20px;
+  background: var(--line);
+  border-radius: 99px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.toggle-switch input:checked + .toggle-track {
+  background: var(--accent);
+}
+
+.toggle-thumb {
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.2s;
+}
+
+.toggle-switch input:checked + .toggle-track .toggle-thumb {
+  transform: translateX(14px);
+}
+
+/* Result Card */
+.score-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  border: 4px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 16px;
+}
+
+.score-circle .score-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.score-circle .score-label {
+  font-size: 12px;
+  color: var(--mute);
+  margin-top: 4px;
+}
+
+.keyboard-hint {
+  font-size: 11.5px;
+  color: var(--mute);
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--card);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  font-family: monospace;
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="brand">
+    <div class="brand-icon">🚀</div>
+    <div>
+      <h1>Innovation & Incubation MCQ Practice</h1>
+      <div class="subhead">Product Design, Incubation & Entrepreneurship • 120 Questions across 12 Assignments</div>
+    </div>
+  </div>
+  <nav>
+    <button class="nav-btn" data-go="home">🏠 Home</button>
+    <button class="nav-btn" data-go="weak">⚠️ Weak <span id="weakBadge" class="badge warn" style="display:none">0</span></button>
+    <button class="nav-btn" data-go="starred">⭐ Starred <span id="starBadge" class="badge" style="display:none">0</span></button>
+    <button class="nav-btn" data-go="manage">⚙️ Add / Manage</button>
+    <button id="themeToggle" title="Toggle theme">🌓</button>
+  </nav>
+</header>
+<div id="view"></div>
+</main>
+
+<script>
+const KEY_Q = 'incu.questions.v3';
+const KEY_S = 'incu.stats.v3';
+const KEY_STARS = 'incu.stars.v1';
+const KEY_THEME = 'incu.theme.v1';
+const KEY_AUTO = 'incu.auto.v1';
+const KEY_DELAY = 'incu.delay.v1';
+
+const DEFAULT_QUESTIONS = [{"id": "incu_asg01_q01", "asg": 1, "q_num": 1, "q": "What makes an idea valuable even if it fails?", "opts": {"A": "Avoiding collaboration to prevent shared blame", "B": "Gaining valuable lessons and insights from the failure", "C": "Shifting focus to unrelated projects immediately", "D": "Disregarding accountability and blaming external factors"}, "ans": ["B"], "ans_text": "Gaining valuable lessons and insights from the failure", "topic": "Assignment 01: Idea Valuation & Lean Startup Fundamentals", "expl": "Correct Answer: B) Gaining valuable lessons and insights from the failure"}, {"id": "incu_asg01_q02", "asg": 1, "q_num": 2, "q": "What are some key characteristics essential for a business to achieve success?", "opts": {"A": "The ability to balance expenses while maintaining product quality", "B": "Ignoring customer feedback to prioritize internal goals", "C": "Strategic planning and adaptability to market changes", "D": "Focusing solely on profit maximization"}, "ans": ["C"], "ans_text": "Strategic planning and adaptability to market changes", "topic": "Assignment 01: Idea Valuation & Lean Startup Fundamentals", "expl": "Correct Answer: C) Strategic planning and adaptability to market changes"}, {"id": "incu_asg01_q03", "asg": 1, "q_num": 3, "q": "What are the primary objectives of selling a product or service, and how do these address customer needs?", "opts": {"A": "Identifying and fulfilling customer and market needs", "B": "Maximizing profits through aggressive pricing strategies", "C": "Focusing on complex promotional campaigns", "D": "Offering discounts to increase sales"}, "ans": ["A"], "ans_text": "Identifying and fulfilling customer and market needs", "topic": "Assignment 01: Idea Valuation & Lean Startup Fundamentals", "expl": "Correct Answer: A) Identifying and fulfilling customer and market needs"}, {"id": "incu_asg01_q04", "asg": 1, "q_num": 4, "q": "What makes an idea “disruptive”?", "opts": {"A": "Maintaining the existing state and avoiding innovation", "B": "Imitating successful competitors to gain market share", "C": "Introducing changes that challenge existing market norms", "D": "Strictly adhering to traditional market standards"}, "ans": ["C"], "ans_text": "Introducing changes that challenge existing market norms", "topic": "Assignment 01: Idea Valuation & Lean Startup Fundamentals", "expl": "Correct Answer: C) Introducing changes that challenge existing market norms"}, {"id": "incu_asg01_q05", "asg": 1, "q_num": 5, "q": "How does entrepreneurship contribute to economic growth?", "opts": {"A": "By developing robust business models without innovation", "B": "By focusing solely on customer validation and discovery", "C": "By identifying and solving market problems effectively", "D": "By avoiding competitive risks through market isolation"}, "ans": ["C"], "ans_text": "By identifying and solving market problems effectively", "topic": "Assignment 01: Idea Valuation & Lean Startup Fundamentals", "expl": "Correct Answer: C) By identifying and solving market problems effectively"}, {"id": "incu_asg01_q06", "asg": 1, "q_num": 6, "q": "What is emphasized in the Lean Startup methodology for product development?", "opts": {"A": "Graduation degrees as a prerequisite for entrepreneurship", "B": "Rigid execution of initial business plans", "C": "Financial optimization over product innovation", "D": "Continuous learning and validation through customer feedback"}, "ans": ["D"], "ans_text": "Continuous learning and validation through customer feedback", "topic": "Assignment 01: Idea Valuation & Lean Startup Fundamentals", "expl": "Correct Answer: D) Continuous learning and validation through customer feedback"}, {"id": "incu_asg01_q07", "asg": 1, "q_num": 7, "q": "What are the key objectives of the Lean Startup methodology when launching a new product or service?", "opts": {"A": "Customer validation and iterative development", "B": "Company building without market analysis", "C": "Rapid scaling and long-term planning", "D": "Agile engineering without customer feedback"}, "ans": ["A"], "ans_text": "Customer validation and iterative development", "topic": "Assignment 01: Idea Valuation & Lean Startup Fundamentals", "expl": "Correct Answer: A) Customer validation and iterative development"}, {"id": "incu_asg01_q08", "asg": 1, "q_num": 8, "q": "How do institutions foster innovation and entrepreneurship effectively?", "opts": {"A": "By connecting academic research to practical applications in the market", "B": "By focusing exclusively on theoretical research", "C": "By isolating themselves from marketplace collaborations", "D": "By discouraging experimentation within the institution"}, "ans": ["A"], "ans_text": "By connecting academic research to practical applications in the market", "topic": "Assignment 01: Idea Valuation & Lean Startup Fundamentals", "expl": "Correct Answer: A) By connecting academic research to practical applications in the market"}, {"id": "incu_asg01_q09", "asg": 1, "q_num": 9, "q": "How can evidence-based entrepreneurship be defined and applied effectively?", "opts": {"A": "By utilizing validated learning through continuous experimentation and data analysis", "B": "By implementing the Build-Measure-Learn cycle to iteratively develop and improve products", "C": "By making decisions based on empirical evidence rather than assumptions", "D": "By regularly engaging with customers to gather feedback and validate ideas"}, "ans": ["A", "B", "C", "D"], "ans_text": "By utilizing validated learning through continuous experimentation and data analysis. By implementing the Build-Measure-Learn cycle to iteratively develop and improve products. By making decisions based on empirical evidence rather than assumptions. By regularly engaging with customers to gather feedback and validate ideas.", "topic": "Assignment 01: Idea Valuation & Lean Startup Fundamentals", "expl": "Correct Answer: A) By utilizing validated learning through continuous experimentation and data analysis; B) By implementing the Build-Measure-Learn cycle to iteratively develop and improve products; C) By making decisions based on empirical evidence rather than assumptions; D) By regularly engaging with customers to gather feedback and validate ideas"}, {"id": "incu_asg01_q10", "asg": 1, "q_num": 10, "q": "What are some common mistakes startups make?", "opts": {"A": "Adopting the Lean Startup methodology", "B": "Focusing too much on the product and neglecting the market", "C": "Developing solutions without engaging potential customers", "D": "Preparing a business plan and estimating market size"}, "ans": ["B", "C"], "ans_text": "Focusing too much on the product and neglecting the market Developing solutions without engaging potential customers", "topic": "Assignment 01: Idea Valuation & Lean Startup Fundamentals", "expl": "Correct Answer: B) Focusing too much on the product and neglecting the market; C) Developing solutions without engaging potential customers"}, {"id": "incu_asg02_q01", "asg": 2, "q_num": 1, "q": "What can be the main reason for the failure of a startup?", "opts": {"A": "No real need for the product or service", "B": "A skilled and experienced team", "C": "Having sufficient investors and funding", "D": "Offering a user-friendly product"}, "ans": ["A"], "ans_text": "No real need for the product or service", "topic": "Assignment 02: Startup Success, Failure & Team Dynamics", "expl": "Correct Answer: A) No real need for the product or service"}, {"id": "incu_asg02_q02", "asg": 2, "q_num": 2, "q": "Which among the following could be a crucial factor in a team’s unity and success?", "opts": {"A": "Individual achievements", "B": "Lack of diversity", "C": "Frequent disagreements", "D": "Shared vision and common ideology"}, "ans": ["D"], "ans_text": "Shared vision and common ideology", "topic": "Assignment 02: Startup Success, Failure & Team Dynamics", "expl": "Correct Answer: D) Shared vision and common ideology"}, {"id": "incu_asg02_q03", "asg": 2, "q_num": 3, "q": "What are the key objectives of startup founders when launching a product?", "opts": {"A": "Achieving rapid market entry without validation", "B": "Iterative development and customer-centric learning", "C": "Long-term planning without short-term feedback", "D": "Building internal teams over market exploration"}, "ans": ["B"], "ans_text": "Iterative development and customer-centric learning", "topic": "Assignment 02: Startup Success, Failure & Team Dynamics", "expl": "Correct Answer: B) Iterative development and customer-centric learning"}, {"id": "incu_asg02_q04", "asg": 2, "q_num": 4, "q": "How do customer interactions contribute to effectively identifying and addressing market needs?", "opts": {"A": "By gathering direct feedback on products and services", "B": "By uncovering customer pain points and preferences", "C": "By validating business ideas and assumptions", "D": "All of the above"}, "ans": ["D"], "ans_text": "All of the above", "topic": "Assignment 02: Startup Success, Failure & Team Dynamics", "expl": "Correct Answer: D) All of the above"}, {"id": "incu_asg02_q05", "asg": 2, "q_num": 5, "q": "What role do early adopters play in helping a company refine its products or services?", "opts": {"A": "Assist in marketing the product to a broader audience", "B": "Provide critical feedback to improve the product", "C": "Expand production capacity to meet demands", "D": "Offer financial support for scaling operations"}, "ans": ["B"], "ans_text": "Provide critical feedback to improve the product", "topic": "Assignment 02: Startup Success, Failure & Team Dynamics", "expl": "Correct Answer: B) Provide critical feedback to improve the product"}, {"id": "incu_asg02_q06", "asg": 2, "q_num": 6, "q": "Which misconception can mislead startup founders during the growth phase?", "opts": {"A": "Securing funding guarantees success", "B": "Scaling the team strategically", "C": "Prioritizing customer needs over product development", "D": "Focusing on team-building over business goals"}, "ans": ["A"], "ans_text": "Securing funding guarantees success", "topic": "Assignment 02: Startup Success, Failure & Team Dynamics", "expl": "Correct Answer: A) Securing funding guarantees success"}, {"id": "incu_asg02_q07", "asg": 2, "q_num": 7, "q": "Who plays the most crucial role in validating the success of a startup's product or service?", "opts": {"A": "The founder", "B": "The investors", "C": "The customers", "D": "The marketing teams"}, "ans": ["C"], "ans_text": "The customers", "topic": "Assignment 02: Startup Success, Failure & Team Dynamics", "expl": "Correct Answer: C) The customers"}, {"id": "incu_asg02_q08", "asg": 2, "q_num": 8, "q": "What actions should founders take when faced with stagnation in progress?", "opts": {"A": "Reevaluate the business strategy and pivot if necessary", "B": "Increase marketing efforts and budget", "C": "Ignore the issue and hope for improvement", "D": "Cut down on expenses and reduce team size"}, "ans": ["A"], "ans_text": "Reevaluate the business strategy and pivot if necessary", "topic": "Assignment 02: Startup Success, Failure & Team Dynamics", "expl": "Correct Answer: A) Reevaluate the business strategy and pivot if necessary"}, {"id": "incu_asg02_q09", "asg": 2, "q_num": 9, "q": "What characteristics are essential for a startup team to achieve long-term success?", "opts": {"A": "Strong leadership and vision", "B": "Effective communication and collaboration", "C": "Ignoring customer feedback's and focusing on company vision", "D": "Limited market research and focusing on advertisement"}, "ans": ["A", "B"], "ans_text": "Strong leadership and vision Effective communication and collaboration", "topic": "Assignment 02: Startup Success, Failure & Team Dynamics", "expl": "Correct Answer: A) Strong leadership and vision; B) Effective communication and collaboration"}, {"id": "incu_asg02_q10", "asg": 2, "q_num": 10, "q": "What is an essential quality that startup founders must possess?", "opts": {"A": "Strong belief in the startup's vision", "B": "Pursuit of endless funding", "C": "Rapid product development skills", "D": "Exceptional programming expertise"}, "ans": ["A"], "ans_text": "Strong belief in the startup's vision", "topic": "Assignment 02: Startup Success, Failure & Team Dynamics", "expl": "Correct Answer: A) Strong belief in the startup's vision"}, {"id": "incu_asg03_q01", "asg": 3, "q_num": 1, "q": "What role does empathy play while designing a product?", "opts": {"A": "Enhances aesthetics", "B": "Reduces manufacturing costs", "C": "Fosters competition among designers", "D": "Promotes user-centered design"}, "ans": ["D"], "ans_text": "d. Promotes user-centered design", "topic": "Assignment 03: Product Design, Empathy & Design Briefs", "expl": "Correct Answer: D) Promotes user-centered design"}, {"id": "incu_asg03_q02", "asg": 3, "q_num": 2, "q": "What characteristics are crucial for building an ideal team?", "opts": {"A": "A varied skill set and diverse perspectives", "B": "Singular expertise in a specific domain", "C": "Limited experience and collaboration", "D": "A homogeneous team with similar backgrounds"}, "ans": ["A"], "ans_text": "a. A varied skill set and diverse perspectives", "topic": "Assignment 03: Product Design, Empathy & Design Briefs", "expl": "Correct Answer: A) A varied skill set and diverse perspectives"}, {"id": "incu_asg03_q03", "asg": 3, "q_num": 3, "q": "Why is it important to take a product category approach instead of a single-product approach?", "opts": {"A": "Encourages risk diversification and adaptability", "B": "Focuses solely on cost-cutting measures", "C": "Reduces customer engagement and feedback", "D": "Limits the scope of market exploration"}, "ans": ["A"], "ans_text": "a. Encourages risk diversification and adaptability", "topic": "Assignment 03: Product Design, Empathy & Design Briefs", "expl": "Correct Answer: A) Encourages risk diversification and adaptability"}, {"id": "incu_asg03_q04", "asg": 3, "q_num": 4, "q": "What are the key qualities that each team member must possess when working as a team?", "opts": {"A": "Flexibility and willingness to adapt", "B": "Lowering ego and collaborating effectively", "C": "Taking specific roles to solve problems", "D": "All of the above"}, "ans": ["D"], "ans_text": "d. All of the above", "topic": "Assignment 03: Product Design, Empathy & Design Briefs", "expl": "Correct Answer: D) All of the above"}, {"id": "incu_asg03_q05", "asg": 3, "q_num": 5, "q": "What are the key elements essential for creating a clear and concise design brief?", "opts": {"A": "Functional and user requirements", "B": "Budget estimates and target audience", "C": "Project timeline and brand vision", "D": "Comprehensive technical specifications"}, "ans": ["A"], "ans_text": "a. Functional and user requirements", "topic": "Assignment 03: Product Design, Empathy & Design Briefs", "expl": "Correct Answer: A) Functional and user requirements"}, {"id": "incu_asg03_q06", "asg": 3, "q_num": 6, "q": "What is the importance of collaborative design in product development?", "opts": {"A": "Facilitates resource sharing and expertise integration", "B": "Streamlines manufacturing processes", "C": "Enhances aesthetic appeal of the product", "D": "Simplifies administrative tasks"}, "ans": ["A"], "ans_text": "a. Facilitates resource sharing and expertise integration", "topic": "Assignment 03: Product Design, Empathy & Design Briefs", "expl": "Correct Answer: A) Facilitates resource sharing and expertise integration"}, {"id": "incu_asg03_q07", "asg": 3, "q_num": 7, "q": "How can using regulatory barriers help in product design?", "opts": {"A": "Simplifies administrative processes", "B": "Encourages unrestricted innovation", "C": "Ensures public health protection and legal compliance", "D": "Promotes informal market practices"}, "ans": ["C"], "ans_text": "c. Ensures public health protection and legal compliance", "topic": "Assignment 03: Product Design, Empathy & Design Briefs", "expl": "Correct Answer: C) Ensures public health protection and legal compliance"}, {"id": "incu_asg03_q08", "asg": 3, "q_num": 8, "q": "Which element is essential for crafting an effective problem statement?", "opts": {"A": "Providing a detailed solution", "B": "Defining the problem clearly", "C": "Establishing a strict budget", "D": "Highlighting only the team's capabilities"}, "ans": ["B"], "ans_text": "b. Define the problem clearly", "topic": "Assignment 03: Product Design, Empathy & Design Briefs", "expl": "Correct Answer: B) Defining the problem clearly"}, {"id": "incu_asg03_q09", "asg": 3, "q_num": 9, "q": "What is a crucial factor in driving successful innovation within an organization?", "opts": {"A": "Strict compliance with established procedures", "B": "Competition between internal teams", "C": "Interdisciplinary collaboration", "D": "Extensive financial resources"}, "ans": ["C"], "ans_text": "c. Interdisciplinary collaboration", "topic": "Assignment 03: Product Design, Empathy & Design Briefs", "expl": "Correct Answer: C) Interdisciplinary collaboration"}, {"id": "incu_asg03_q10", "asg": 3, "q_num": 10, "q": "Identify the term used for “Previously granted patents and published patent applications.”", "opts": {"A": "Prior art", "B": "Reference documents", "C": "Past literature", "D": "Intellectual archives"}, "ans": ["A"], "ans_text": "a. Prior art", "topic": "Assignment 03: Product Design, Empathy & Design Briefs", "expl": "Correct Answer: A) Prior art"}, {"id": "incu_asg04_q01", "asg": 4, "q_num": 1, "q": "What could cause a startup to fail despite having an innovative product?", "opts": {"A": "Addressing user pain points effectively", "B": "Prioritizing customer satisfaction", "C": "Lack of understanding of customer needs", "D": "Regular customer feedback for product improvement"}, "ans": ["C"], "ans_text": "c. Lack of understanding of customer needs", "topic": "Assignment 04: Outside-In Thinking & Sustainable Markets", "expl": "Correct Answer: C) Lack of understanding of customer needs"}, {"id": "incu_asg04_q02", "asg": 4, "q_num": 2, "q": "Which of the following best captures the essence of the ‘outside-in thinking’ approach in product design?", "opts": {"A": "Creating products that cater to customer requirements", "B": "Enhancing internal operational processes", "C": "Focusing on excessive engineering solutions", "D": "Disregarding customer feedback in decision-making"}, "ans": ["A"], "ans_text": "a. Creating products that cater to customer requirements", "topic": "Assignment 04: Outside-In Thinking & Sustainable Markets", "expl": "Correct Answer: A) Creating products that cater to customer requirements"}, {"id": "incu_asg04_q03", "asg": 4, "q_num": 3, "q": "In which areas do startups face challenges during their early stages?", "opts": {"A": "Scaling the business quickly", "B": "Building a skilled and cohesive team", "C": "Acquiring venture capital easily", "D": "Creating an effective marketing strategy"}, "ans": ["B"], "ans_text": "b. Building a skilled and cohesive team", "topic": "Assignment 04: Outside-In Thinking & Sustainable Markets", "expl": "Correct Answer: B) Building a skilled and cohesive team"}, {"id": "incu_asg04_q04", "asg": 4, "q_num": 4, "q": "What strategies can effectively promote sustainable products in rural markets?", "opts": {"A": "Social media campaigns targeting urban audiences", "B": "Distribution through government schemes", "C": "Online marketing through digital platforms", "D": "Door-to-door sales in urban regions"}, "ans": ["B"], "ans_text": "b. Distribution through government schemes", "topic": "Assignment 04: Outside-In Thinking & Sustainable Markets", "expl": "Correct Answer: B) Distribution through government schemes"}, {"id": "incu_asg04_q05", "asg": 4, "q_num": 5, "q": "What are some effective strategies to increase awareness about sustainable products?", "opts": {"A": "Collaborating with influential figures and forming partnerships", "B": "Solely relying on multi-level marketing and digital advertisements", "C": "Hosting engaging and interactive demonstrations", "D": "Building and educating communities"}, "ans": ["A", "C", "D"], "ans_text": "a. Collaborating with influential figures and forming partnerships c. Hosting engaging and interactive demonstrations d. Building and educating communities", "topic": "Assignment 04: Outside-In Thinking & Sustainable Markets", "expl": "Correct Answer: A) Collaborating with influential figures and forming partnerships; C) Hosting engaging and interactive demonstrations; D) Building and educating communities"}, {"id": "incu_asg04_q06", "asg": 4, "q_num": 6, "q": "How can pricing strategies improve the accessibility and financial viability of sustainable products?", "opts": {"A": "Offering direct sales without intermediaries", "B": "Government subsidies for eco-friendly products", "C": "Encouraging bulk orders from organizations", "D": "All of the above"}, "ans": ["D"], "ans_text": "d. All of the above", "topic": "Assignment 04: Outside-In Thinking & Sustainable Markets", "expl": "Correct Answer: D) All of the above"}, {"id": "incu_asg04_q07", "asg": 4, "q_num": 7, "q": "What factors are critical for a startup to attract investors?", "opts": {"A": "Demonstrating a real and solvable problem", "B": "Ignoring competition in the market", "C": "Focusing solely on futuristic technology", "D": "Providing vague or exaggerated solutions"}, "ans": ["A"], "ans_text": "a. Demonstrating a real and solvable problem", "topic": "Assignment 04: Outside-In Thinking & Sustainable Markets", "expl": "Correct Answer: A) Demonstrating a real and solvable problem"}, {"id": "incu_asg04_q08", "asg": 4, "q_num": 8, "q": "What key considerations should businesses keep in mind when entering a new market?", "opts": {"A": "Understanding the cultural and economic environment", "B": "Avoiding market research and going with instincts", "C": "Ignoring local regulations and norms", "D": "Relying solely on existing products and services without adaptation"}, "ans": ["A"], "ans_text": "a. Understanding the cultural and economic environment", "topic": "Assignment 04: Outside-In Thinking & Sustainable Markets", "expl": "Correct Answer: A) Understanding the cultural and economic environment"}, {"id": "incu_asg04_q09", "asg": 4, "q_num": 9, "q": "How are urgent or active problems identified on the problem recognition scale?", "opts": {"A": "By ignoring the problem entirely", "B": "Recognizing a problem and actively seeking a solution", "C": "Recognizing a problem but refusing to act on it", "D": "Adjusting to the problem without solving it"}, "ans": ["B"], "ans_text": "b. Recognizing a problem and actively seeking a solution", "topic": "Assignment 04: Outside-In Thinking & Sustainable Markets", "expl": "Correct Answer: B) Recognizing a problem and actively seeking a solution"}, {"id": "incu_asg04_q10", "asg": 4, "q_num": 10, "q": "In the passive problem stage, what defines an individual's awareness of a problem on the problem recognition scale?", "opts": {"A": "No awareness of the problem exists", "B": "Awareness of the problem but no motivation to change", "C": "Motivation to change without understanding the problem", "D": "Recognizing the problem but being unable to act on it"}, "ans": ["B"], "ans_text": "b. Awareness of the problem but no motivation to change", "topic": "Assignment 04: Outside-In Thinking & Sustainable Markets", "expl": "Correct Answer: B) Awareness of the problem but no motivation to change"}, {"id": "incu_asg05_q01", "asg": 5, "q_num": 1, "q": "What strategies are crucial for converting academic research into practical societal benefits?", "opts": {"A": "Establishing obstacles to innovation", "B": "Partnering with industries to link research with real-world applications", "C": "Keeping research results confidential", "D": "Engaging in rivalry with industries to demonstrate academic dominance"}, "ans": ["B"], "ans_text": "b. Partnering with industries to link research with real-world applications", "topic": "Assignment 05: Innovation, IPR & Technology Readiness (TRL)", "expl": "Correct Answer: B) Partnering with industries to link research with real-world applications"}, {"id": "incu_asg05_q02", "asg": 5, "q_num": 2, "q": "Why are investors often reluctant to invest in healthcare product startups?", "opts": {"A": "High profit margins in the industry", "B": "Poor success rates of medical devices", "C": "Rapidly growing demand for medical devices", "D": "Shorter research and development cycles"}, "ans": ["B"], "ans_text": "b. Poor success rates of medical devices", "topic": "Assignment 05: Innovation, IPR & Technology Readiness (TRL)", "expl": "Correct Answer: B) Poor success rates of medical devices"}, {"id": "incu_asg05_q03", "asg": 5, "q_num": 3, "q": "What initial step is crucial for developing a successful design solution?", "opts": {"A": "Identifying the problem and understanding functional requirements", "B": "Planning marketing campaigns and advertising strategies", "C": "Conducting employee training and managing resources", "D": "Securing Intellectual Property Rights and patents"}, "ans": ["A"], "ans_text": "a. Identifying the problem and understanding functional requirements", "topic": "Assignment 05: Innovation, IPR & Technology Readiness (TRL)", "expl": "Correct Answer: A) Identifying the problem and understanding functional requirements"}, {"id": "incu_asg05_q04", "asg": 5, "q_num": 4, "q": "What role did telemedicine play in improving healthcare during global pandemics?", "opts": {"A": "Increased healthcare costs without benefits", "B": "Reduced the strain on physical healthcare facilities", "C": "Created barriers for patient access to care", "D": "Complicated the delivery of medical services"}, "ans": ["B"], "ans_text": "b. Reduced the strain on physical healthcare facilities", "topic": "Assignment 05: Innovation, IPR & Technology Readiness (TRL)", "expl": "Correct Answer: B) Reduced the strain on physical healthcare facilities"}, {"id": "incu_asg05_q05", "asg": 5, "q_num": 5, "q": "What is the main purpose of pilot production in the development process?", "opts": {"A": "Generating marketing and advertising content", "B": "Testing and adapting design features based on user feedback", "C": "Filing for patents before large-scale production", "D": "Conducting research in controlled lab environments"}, "ans": ["B"], "ans_text": "b. Testing and adapting design features based on user feedback", "topic": "Assignment 05: Innovation, IPR & Technology Readiness (TRL)", "expl": "Correct Answer: B) Testing and adapting design features based on user feedback"}, {"id": "incu_asg05_q06", "asg": 5, "q_num": 6, "q": "At which point in the innovation process should businesses prioritize securing Intellectual Property Rights (IPR) to protect their inventions?", "opts": {"A": "During the initial idea conception", "B": "After developing a working prototype", "C": "Before commercializing the product", "D": "Once the product is widely available in the market"}, "ans": ["C"], "ans_text": "c. Before commercializing the product", "topic": "Assignment 05: Innovation, IPR & Technology Readiness (TRL)", "expl": "Correct Answer: C) Before commercializing the product"}, {"id": "incu_asg05_q07", "asg": 5, "q_num": 7, "q": "Who is eligible to obtain licenses for Intellectual Property Rights (IPR)?", "opts": {"A": "Start-ups only", "B": "Industry professionals only", "C": "Non-Governmental Organizations (NGOs) only", "D": "All of the above"}, "ans": ["D"], "ans_text": "d. All of the above", "topic": "Assignment 05: Innovation, IPR & Technology Readiness (TRL)", "expl": "Correct Answer: D) All of the above"}, {"id": "incu_asg05_q08", "asg": 5, "q_num": 8, "q": "What does TRL stand for in the context of innovation and development?", "opts": {"A": "Technology Readiness Levels", "B": "Transition and Research Limits", "C": "Technological Resource Level", "D": "Test and Reliability Levels"}, "ans": ["A"], "ans_text": "a. Technology Readiness Levels", "topic": "Assignment 05: Innovation, IPR & Technology Readiness (TRL)", "expl": "Correct Answer: A) Technology Readiness Levels"}, {"id": "incu_asg05_q09", "asg": 5, "q_num": 9, "q": "What key aspect should be prioritized when developing a Proof of Concept (POC)?", "opts": {"A": "Demonstrating functional feasibility", "B": "Implementing industrial techniques for scalability", "C": "Securing patent protection during initial stages", "D": "Brainstorming creative ideas without practical implementation"}, "ans": ["A"], "ans_text": "a. Demonstrating functional feasibility", "topic": "Assignment 05: Innovation, IPR & Technology Readiness (TRL)", "expl": "Correct Answer: A) Demonstrating functional feasibility"}, {"id": "incu_asg05_q10", "asg": 5, "q_num": 10, "q": "What are the best practices for defining the functional requirements of a project?", "opts": {"A": "Conducting thorough stakeholder interviews to gather insights", "B": "Ignoring end-user feedback and relying on assumptions", "C": "Prioritizing features based on developer convenience", "D": "Overlooking the project scope and timeline"}, "ans": ["A"], "ans_text": "a. Conducting thorough stakeholder interviews to gather insights", "topic": "Assignment 05: Innovation, IPR & Technology Readiness (TRL)", "expl": "Correct Answer: A) Conducting thorough stakeholder interviews to gather insights"}, {"id": "incu_asg06_q01", "asg": 6, "q_num": 1, "q": "Which key elements are essential for successfully engaging customers using a human- centered approach in product development?", "opts": {"A": "Utilizing lean methods and tools", "B": "Building empathy and conducting user research", "C": "Relying on traditional marketing strategies", "D": "Concentrating solely on product ideas"}, "ans": ["B"], "ans_text": "b. Building empathy and conducting user research", "topic": "Assignment 06: Human-Centered Design & Design Management", "expl": "Correct Answer: B) Building empathy and conducting user research"}, {"id": "incu_asg06_q02", "asg": 6, "q_num": 2, "q": "Which factor is most critical when aligning a product with customer expectations during development?", "opts": {"A": "Conducting iterative testing and feedback loops", "B": "Emphasizing aesthetic appeal over functionality", "C": "Ignoring competitor analysis", "D": "Skipping the prototyping phase"}, "ans": ["A"], "ans_text": "a. Conducting iterative testing and feedback loops", "topic": "Assignment 06: Human-Centered Design & Design Management", "expl": "Correct Answer: A) Conducting iterative testing and feedback loops"}, {"id": "incu_asg06_q03", "asg": 6, "q_num": 3, "q": "How do design thinking, user research, and strategic planning benefit an organization?", "opts": {"A": "Links business operations with innovation efforts", "B": "Helps build mock-ups for product testing", "C": "Focuses on generating creative ideas only", "D": "Encourages quick decision-making without research"}, "ans": ["A"], "ans_text": "a. Links business operations with innovation efforts", "topic": "Assignment 06: Human-Centered Design & Design Management", "expl": "Correct Answer: A) Links business operations with innovation efforts"}, {"id": "incu_asg06_q04", "asg": 6, "q_num": 4, "q": "What should the primary objective of a design researcher and strategist be when working for a client?", "opts": {"A": "Focus solely on the product's core idea", "B": "Balance user needs, technological feasibility, and business objectives", "C": "Ensure customer experience takes precedence over business goals", "D": "Prioritize technical feasibility over desirability"}, "ans": ["B"], "ans_text": "b. Balance user needs, technological feasibility, and business objectives", "topic": "Assignment 06: Human-Centered Design & Design Management", "expl": "Correct Answer: B) Balance user needs, technological feasibility, and business objectives"}, {"id": "incu_asg06_q05", "asg": 6, "q_num": 5, "q": "Which strategy is most effective for encouraging interviewees to share valuable information?", "opts": {"A": "Asking complex and detailed questions", "B": "Beginning with secondary objectives", "C": "Building rapport and trust with the interviewee", "D": "Employing a rigid and formal interview structure"}, "ans": ["C"], "ans_text": "c. Building rapport and trust with the interviewee", "topic": "Assignment 06: Human-Centered Design & Design Management", "expl": "Correct Answer: C) Building rapport and trust with the interviewee"}, {"id": "incu_asg06_q06", "asg": 6, "q_num": 6, "q": "What are the essential characteristics of a robust design brief?", "opts": {"A": "Providing detailed technical specifications and timelines", "B": "Outlining comprehensive marketing strategies", "C": "Including extensive budget estimates", "D": "Identifying user pain points, mapping user journeys, and ensuring ecosystem fit"}, "ans": ["D"], "ans_text": "d. Identifying user pain points, mapping user journeys, and ensuring ecosystem fit", "topic": "Assignment 06: Human-Centered Design & Design Management", "expl": "Correct Answer: D) Identifying user pain points, mapping user journeys, and ensuring ecosystem fit"}, {"id": "incu_asg06_q07", "asg": 6, "q_num": 7, "q": "What is design management in relation to achieving organizational goals?", "opts": {"A": "Lateral thinking and creativity", "B": "Overseeing design teams and their timelines", "C": "Collaboration between stakeholders to meet business goals", "D": "A structured process for fulfilling business objectives through design"}, "ans": ["D"], "ans_text": "d. A structured process for fulfilling business objectives through design", "topic": "Assignment 06: Human-Centered Design & Design Management", "expl": "Correct Answer: D) A structured process for fulfilling business objectives through design"}, {"id": "incu_asg06_q08", "asg": 6, "q_num": 8, "q": "What are the three key qualities that a client seeks in a design firm?", "opts": {"A": "Discipline, speed, and high fees", "B": "Quality, speed, and transparency", "C": "Collaboration, extended timelines, and reliability", "D": "Minimal interaction, predictability, and discipline"}, "ans": ["B"], "ans_text": "b. Quality, speed, and transparency", "topic": "Assignment 06: Human-Centered Design & Design Management", "expl": "Correct Answer: B) Quality, speed, and transparency"}, {"id": "incu_asg06_q09", "asg": 6, "q_num": 9, "q": "What should be included in a comprehensive design brief to ensure project success?", "opts": {"A": "Detailed project timeline and budget", "B": "In-depth competitor analysis and benchmarking", "C": "Specific user personas and their pain points", "D": "Finalized marketing strategies and plans"}, "ans": ["C"], "ans_text": "c. Specific user personas and their pain points", "topic": "Assignment 06: Human-Centered Design & Design Management", "expl": "Correct Answer: C) Specific user personas and their pain points"}, {"id": "incu_asg06_q10", "asg": 6, "q_num": 10, "q": "Why is it important for designers to empathize with both users and business goals?", "opts": {"A": "To ensure marketing and advertising success", "B": "To prioritize aesthetics over functionality", "C": "To balance creative ideas with realistic objectives", "D": "To reduce the complexity of the design process"}, "ans": ["C"], "ans_text": "c. To balance creative ideas with realistic objectives", "topic": "Assignment 06: Human-Centered Design & Design Management", "expl": "Correct Answer: C) To balance creative ideas with realistic objectives"}, {"id": "incu_asg07_q01", "asg": 7, "q_num": 1, "q": "Which approach emphasizes collaboration, iteration, and a non-linear process to develop innovative solutions?", "opts": {"A": "Economic stability", "B": "Design thinking", "C": "Complacency", "D": "Short-term focus"}, "ans": ["B"], "ans_text": "Design thinking", "topic": "Assignment 07: Design Thinking, Synectics & Business Models", "expl": "Correct Answer: B) Design thinking"}, {"id": "incu_asg07_q02", "asg": 7, "q_num": 2, "q": "What is a problem-solving methodology that encourages creative thinking by connecting seemingly unrelated concepts?", "opts": {"A": "Brainstorming", "B": "Synectics", "C": "Mind mapping", "D": "SWOT analysis"}, "ans": ["B"], "ans_text": "Synectics", "topic": "Assignment 07: Design Thinking, Synectics & Business Models", "expl": "Correct Answer: B) Synectics"}, {"id": "incu_asg07_q03", "asg": 7, "q_num": 3, "q": "What are the most important three critical factors to consider when developing a product?", "opts": {"A": "Market Need, technical feasibility, and business viability", "B": "Advertisement, product packaging, and distribution networks", "C": "User sensibility, market size, and product range", "D": "Profit, market sensitivity, and employee strength"}, "ans": ["A"], "ans_text": "Market Need, technical feasibility, and business viability", "topic": "Assignment 07: Design Thinking, Synectics & Business Models", "expl": "Correct Answer: A) Market Need, technical feasibility, and business viability"}, {"id": "incu_asg07_q04", "asg": 7, "q_num": 4, "q": "Which tool graphically represents a business model and helps stakeholders understand it easily?", "opts": {"A": "Business Model Canvas", "B": "Balance sheet", "C": "Profit and loss statement", "D": "Organizational chart"}, "ans": ["A"], "ans_text": "Business Model Canvas", "topic": "Assignment 07: Design Thinking, Synectics & Business Models", "expl": "Correct Answer: A) Business Model Canvas"}, {"id": "incu_asg07_q05", "asg": 7, "q_num": 5, "q": "What is the meaning of \"Double Whammy\"?", "opts": {"A": "A situation where two positive events occur simultaneously.", "B": "A situation where two adverse events or effects occur simultaneously.", "C": "A term used to describe a single unfortunate event.", "D": "A financial model for maximizing profits."}, "ans": ["B"], "ans_text": "A situation where two adverse events or effects occur simultaneously", "topic": "Assignment 07: Design Thinking, Synectics & Business Models", "expl": "Correct Answer: B) A situation where two adverse events or effects occur simultaneously."}, {"id": "incu_asg07_q06", "asg": 7, "q_num": 6, "q": "What makes a collaborative model beneficial for entrepreneurship?", "opts": {"A": "Provides access to resources", "B": "Offers networking opportunities", "C": "Creates a sense of community", "D": "All of the above"}, "ans": ["D"], "ans_text": "All of the above", "topic": "Assignment 07: Design Thinking, Synectics & Business Models", "expl": "Correct Answer: D) All of the above"}, {"id": "incu_asg07_q07", "asg": 7, "q_num": 7, "q": "What distinguishes the fractional ownership business model from other models?", "opts": {"A": "Shared ownership of physical assets", "B": "Focus on virtual assets and digital goods", "C": "Primary emphasis on intellectual property rights", "D": "Leasing equipment to businesses"}, "ans": ["A"], "ans_text": "Shared ownership of physical assets", "topic": "Assignment 07: Design Thinking, Synectics & Business Models", "expl": "Correct Answer: A) Shared ownership of physical assets"}, {"id": "incu_asg07_q08", "asg": 7, "q_num": 8, "q": "What key criteria should a business model meet to achieve optimal success?", "opts": {"A": "High Initial Investment, Extensive Workforce, and Expensive Marketing", "B": "Clear Value Proposition, Scalability, and Sustainable Revenue Streams", "C": "Low Costs, Rapid Expansion, and Minimal Effort", "D": "Single Revenue Source, Limited Target Market, and High Complexity"}, "ans": ["B"], "ans_text": "Clear Value Proposition, Scalability, and Sustainable Revenue Streams", "topic": "Assignment 07: Design Thinking, Synectics & Business Models", "expl": "Correct Answer: B) Clear Value Proposition, Scalability, and Sustainable Revenue Streams"}, {"id": "incu_asg07_q09", "asg": 7, "q_num": 9, "q": "Which key performance metrics help to monitor a business's success?", "opts": {"A": "Revenue growth, customer acquisition, and value proposition", "B": "Employee welfare, operational cost reduction, and inventory turnover", "C": "Brand recognition, social media reach, and product diversification", "D": "Customer retention, marketing spends, and aesthetic appeal"}, "ans": ["A"], "ans_text": "Revenue growth, customer acquisition, and value proposition", "topic": "Assignment 07: Design Thinking, Synectics & Business Models", "expl": "Correct Answer: A) Revenue growth, customer acquisition, and value proposition"}, {"id": "incu_asg07_q10", "asg": 7, "q_num": 10, "q": "Why is the Lean Canvas a valuable tool for startups?", "opts": {"A": "Helps secure large investments from venture capitalists", "B": "Develops a detailed five-year financial plan", "C": "Allows startups to test and iterate on their business model assumptions quickly", "D": "Designs a complex organizational structure for future growth"}, "ans": ["C"], "ans_text": "Allows startups to test and iterate on their business model assumptions quickly", "topic": "Assignment 07: Design Thinking, Synectics & Business Models", "expl": "Correct Answer: C) Allows startups to test and iterate on their business model assumptions quickly"}, {"id": "incu_asg08_q01", "asg": 8, "q_num": 1, "q": "What advantages can your business gain from identifying early adopters?", "opts": {"A": "Competitive disadvantage", "B": "Validate market demands through early feedback", "C": "Slow revenue generation", "D": "Requires less marketing effort"}, "ans": ["B"], "ans_text": "Validate market demands through early feedback", "topic": "Assignment 08: MVP, Early Adopters & Lean Canvas", "expl": "Correct Answer: B) Validate market demands through early feedback"}, {"id": "incu_asg08_q02", "asg": 8, "q_num": 2, "q": "What are the key characteristics that early-stage entrepreneurs should develop?", "opts": {"A": "An entrepreneurial mindset", "B": "Adaptability and resilience", "C": "Upholding ethical standards", "D": "All of the above"}, "ans": ["D"], "ans_text": "All of the above", "topic": "Assignment 08: MVP, Early Adopters & Lean Canvas", "expl": "Correct Answer: D) All of the above"}, {"id": "incu_asg08_q03", "asg": 8, "q_num": 3, "q": "What is essential for delivering a compelling business pitch to investors?", "opts": {"A": "Detailed operational procedures", "B": "A scalable and profitable business model", "C": "Market size and demographics", "D": "Long-term industry trends"}, "ans": ["B"], "ans_text": "A scalable and profitable business model", "topic": "Assignment 08: MVP, Early Adopters & Lean Canvas", "expl": "Correct Answer: B) A scalable and profitable business model"}, {"id": "incu_asg08_q04", "asg": 8, "q_num": 4, "q": "What role does a Minimum Viable Product (MVP) play in product development?", "opts": {"A": "Builds brand reputation without validation", "B": "Attracts early-adopter customers and validates the product idea", "C": "Focuses on short-term revenue generation", "D": "Prioritizes aesthetics over functionality"}, "ans": ["B"], "ans_text": "Attracts early-adopter customers and validates the product idea", "topic": "Assignment 08: MVP, Early Adopters & Lean Canvas", "expl": "Correct Answer: B) Attracts early-adopter customers and validates the product idea"}, {"id": "incu_asg08_q05", "asg": 8, "q_num": 5, "q": "What are the initial steps involved in developing a Lean Canvas?", "opts": {"A": "Identify your target customers and users", "B": "List your customer’s top three problems", "C": "Develop solutions for each identified problem", "D": "All of the above"}, "ans": ["D"], "ans_text": "All of the above", "topic": "Assignment 08: MVP, Early Adopters & Lean Canvas", "expl": "Correct Answer: D) All of the above"}, {"id": "incu_asg08_q06", "asg": 8, "q_num": 6, "q": "What factors must a product have to remain competitive in the market?", "opts": {"A": "Consistent product improvement and innovation", "B": "Incremental price increases", "C": "Limited scalability to control costs", "D": "Focus on low-impact trends"}, "ans": ["A"], "ans_text": "Consistent product improvement and innovation", "topic": "Assignment 08: MVP, Early Adopters & Lean Canvas", "expl": "Correct Answer: A) Consistent product improvement and innovation"}, {"id": "incu_asg08_q07", "asg": 8, "q_num": 7, "q": "What term is used to describe legal protections that prevent unauthorized use of original creative works?", "opts": {"A": "Physical property", "B": "Intellectual property", "C": "Commercial asset", "D": "Industrial design"}, "ans": ["B"], "ans_text": "Intellectual property", "topic": "Assignment 08: MVP, Early Adopters & Lean Canvas", "expl": "Correct Answer: B) Intellectual property"}, {"id": "incu_asg08_q08", "asg": 8, "q_num": 8, "q": "Which types of intellectual property rights (IPR) protect innovations and creative works?", "opts": {"A": "Real estate and buildings", "B": "Patents, copyrights, trademarks, and trade secrets", "C": "Financial statements and records", "D": "Office equipment and tools"}, "ans": ["B"], "ans_text": "Patents, copyrights, trademarks, and trade secrets", "topic": "Assignment 08: MVP, Early Adopters & Lean Canvas", "expl": "Correct Answer: B) Patents, copyrights, trademarks, and trade secrets"}, {"id": "incu_asg08_q09", "asg": 8, "q_num": 9, "q": "What is the primary focus of customer acquisition strategies for startups?", "opts": {"A": "Ensuring long-term customer retention", "B": "Maximizing short-term sales revenue", "C": "Ignoring customer feedback for cost-saving", "D": "Relying on word-of-mouth marketing alone"}, "ans": ["A"], "ans_text": "Ensuring long-term customer retention", "topic": "Assignment 08: MVP, Early Adopters & Lean Canvas", "expl": "Correct Answer: A) Ensuring long-term customer retention"}, {"id": "incu_asg08_q10", "asg": 8, "q_num": 10, "q": "How does a strong Unique Value Proposition (UVP) benefit a startup?", "opts": {"A": "Enhances the company's ability to attract and retain customers by clearly addressing their needs and preferences", "B": "Solely focuses on improving financial performance metrics without considering customer satisfaction", "C": "Prioritizes technological infrastructure over understanding customer needs", "D": "Concentrates on offering low-cost services at the expense of quality"}, "ans": ["A"], "ans_text": "Enhances the company's ability to attract and retain customers by clearly addressing their needs and preferences", "topic": "Assignment 08: MVP, Early Adopters & Lean Canvas", "expl": "Correct Answer: A) Enhances the company's ability to attract and retain customers by clearly addressing their needs and preferences"}, {"id": "incu_asg09_q01", "asg": 9, "q_num": 1, "q": "What barriers must a designer or entrepreneur overcome to turn an idea into action?", "opts": {"A": "Lack of confidence in their skills", "B": "Fear of negative feedback", "C": "Difficulty in securing funding", "D": "All of the above"}, "ans": ["D"], "ans_text": "All of the above", "topic": "Assignment 09: Techno-Entrepreneurship & Incubation Journey", "expl": "Correct Answer: D) All of the above"}, {"id": "incu_asg09_q02", "asg": 9, "q_num": 2, "q": "What is the most important relationship for a startup to manage?", "opts": {"A": "Funding sources", "B": "Target customers", "C": "Technological infrastructure", "D": "Market needs"}, "ans": ["B"], "ans_text": "Target customers", "topic": "Assignment 09: Techno-Entrepreneurship & Incubation Journey", "expl": "Correct Answer: B) Target customers"}, {"id": "incu_asg09_q03", "asg": 9, "q_num": 3, "q": "What types of funding are typically sought by early-stage entrepreneurs or startups?", "opts": {"A": "Government grants", "B": "Seed funding and crowdfunding", "C": "Long-term loans with high interest rates", "D": "Equity funds"}, "ans": ["A", "B"], "ans_text": "Government grants Seed funding and crowdfunding", "topic": "Assignment 09: Techno-Entrepreneurship & Incubation Journey", "expl": "Correct Answer: A) Government grants; B) Seed funding and crowdfunding"}, {"id": "incu_asg09_q04", "asg": 9, "q_num": 4, "q": "What are some reasons why certain regions may lag in techno-entrepreneurial ventures?", "opts": {"A": "Education is focused solely on securing jobs", "B": "Abundance of natural resources reduces the need for innovation", "C": "Government policies discourage entrepreneurship", "D": "All of the above"}, "ans": ["D"], "ans_text": "All of the above", "topic": "Assignment 09: Techno-Entrepreneurship & Incubation Journey", "expl": "Correct Answer: D) All of the above"}, {"id": "incu_asg09_q05", "asg": 9, "q_num": 5, "q": "What is the purpose of the incubation stage in the entrepreneurial journey?", "opts": {"A": "Developing a business plan and securing resources", "B": "Taking a product idea to commercialization", "C": "Conducting advanced research and development", "D": "Scaling the business for global markets"}, "ans": ["A"], "ans_text": "Developing a business plan and securing resources", "topic": "Assignment 09: Techno-Entrepreneurship & Incubation Journey", "expl": "Correct Answer: A) Developing a business plan and securing resources"}, {"id": "incu_asg09_q06", "asg": 9, "q_num": 6, "q": "How does the role of an entrepreneur differ from that of an innovator?", "opts": {"A": "Entrepreneurs focus on maximizing profits, while innovators solve problems without business goals", "B": "Entrepreneurs see problems as business opportunities, while innovators focus solely on solving problems", "C": "Entrepreneurs work alone, while innovators always work in teams", "D": "Entrepreneurs need formal education, while innovators rely on creativity"}, "ans": ["B"], "ans_text": "Entrepreneurs see problems as business opportunities, while innovators focus solely on solving problems", "topic": "Assignment 09: Techno-Entrepreneurship & Incubation Journey", "expl": "Correct Answer: B) Entrepreneurs see problems as business opportunities, while innovators focus solely on solving problems"}, {"id": "incu_asg09_q07", "asg": 9, "q_num": 7, "q": "What is the purpose of clinical immersion in the healthcare sector for entrepreneurs?", "opts": {"A": "To provide administrative training and management skills", "B": "To identify unmet needs and gather insights for innovation", "C": "To develop marketing strategies for healthcare products", "D": "To focus on financial analysis and budget planning"}, "ans": ["B"], "ans_text": "To identify unmet needs and gather insights for innovation", "topic": "Assignment 09: Techno-Entrepreneurship & Incubation Journey", "expl": "Correct Answer: B) To identify unmet needs and gather insights for innovation"}, {"id": "incu_asg09_q08", "asg": 9, "q_num": 8, "q": "What key factor ensures better execution of an entrepreneurial idea?", "opts": {"A": "Clear definition of customer needs and market gaps", "B": "Strong advertising strategy and brand presence", "C": "Advanced office infrastructure and equipment", "D": "Rigid adherence to the initial business plan"}, "ans": ["A"], "ans_text": "Clear definition of customer needs and market gaps", "topic": "Assignment 09: Techno-Entrepreneurship & Incubation Journey", "expl": "Correct Answer: A) Clear definition of customer needs and market gaps"}, {"id": "incu_asg09_q09", "asg": 9, "q_num": 9, "q": "What is the process of transferring an idea to industry through intellectual property or technology transfer called?", "opts": {"A": "Entrepreneurship", "B": "Commercialization", "C": "Enterprise development", "D": "Incubation"}, "ans": ["B"], "ans_text": "Commercialization", "topic": "Assignment 09: Techno-Entrepreneurship & Incubation Journey", "expl": "Correct Answer: B) Commercialization"}, {"id": "incu_asg09_q10", "asg": 9, "q_num": 10, "q": "Which stage of the entrepreneurial journey focuses on the initial creation and development of a startup idea?", "opts": {"A": "Idea Generation Stage", "B": "Research Stage", "C": "Incubation Stage", "D": "Scaling Stage"}, "ans": ["A"], "ans_text": "Idea Generation Stage", "topic": "Assignment 09: Techno-Entrepreneurship & Incubation Journey", "expl": "Correct Answer: A) Idea Generation Stage"}, {"id": "incu_asg10_q01", "asg": 10, "q_num": 1, "q": "What creative thinking technique involves individuals imagining themselves as part of the problem or situation they are trying to solve?", "opts": {"A": "Fantasy analogy", "B": "Personal analogy", "C": "Symbolic analogy", "D": "CAD analogy"}, "ans": ["B"], "ans_text": "Personal analogy", "topic": "Assignment 10: Creative Thinking, Analogies & Prototyping", "expl": "Correct Answer: B) Personal analogy"}, {"id": "incu_asg10_q02", "asg": 10, "q_num": 2, "q": "Which of the following is NOT a typical prototyping method?", "opts": {"A": "Additive methods", "B": "Subtractive methods", "C": "Forming methods", "D": "Lateral thinking"}, "ans": ["D"], "ans_text": "Lateral thinking", "topic": "Assignment 10: Creative Thinking, Analogies & Prototyping", "expl": "Correct Answer: D) Lateral thinking"}, {"id": "incu_asg10_q03", "asg": 10, "q_num": 3, "q": "What is the correct sequence during a product development process?", "opts": {"A": "Ideation → Concept Generation → Prototyping → Testing → Market Launch", "B": "Market Research → Concept Generation → Testing → Ideation → Prototyping", "C": "Concept Generation → Prototyping → Testing → Market Launch → Ideation", "D": "Ideation → Market Launch → Prototype → Testing → Concept Generation"}, "ans": ["A"], "ans_text": "Ideation → Concept Generation → Prototyping → Testing → Market Launch", "topic": "Assignment 10: Creative Thinking, Analogies & Prototyping", "expl": "Correct Answer: A) Ideation → Concept Generation → Prototyping → Testing → Market Launch"}, {"id": "incu_asg10_q04", "asg": 10, "q_num": 4, "q": "Which type of reasoning involves forming general conclusions from specific observations?", "opts": {"A": "Abductive reasoning", "B": "Deductive reasoning", "C": "Inductive reasoning", "D": "Analytical reasoning"}, "ans": ["C"], "ans_text": "Inductive reasoning", "topic": "Assignment 10: Creative Thinking, Analogies & Prototyping", "expl": "Correct Answer: C) Inductive reasoning"}, {"id": "incu_asg10_q05", "asg": 10, "q_num": 5, "q": "How does frugality in product innovation benefit organizations?", "opts": {"A": "By increasing production costs to maximize resources", "B": "By minimizing waste and reducing costs through efficient use of resources", "C": "By prioritizing aesthetics over functionality", "D": "By focusing solely on rapid scaling without cost considerations"}, "ans": ["B"], "ans_text": "By minimizing waste and reducing costs through efficient use of resources", "topic": "Assignment 10: Creative Thinking, Analogies & Prototyping", "expl": "Correct Answer: B) By minimizing waste and reducing costs through efficient use of resources"}, {"id": "incu_asg10_q06", "asg": 10, "q_num": 6, "q": "What is the primary purpose of a Proof of Concept (POC)?", "opts": {"A": "To validate the feasibility and viability of a new idea or concept", "B": "To generate the final product for market launch", "C": "To secure funding for large-scale production", "D": "To build prototypes for user feedback"}, "ans": ["A"], "ans_text": "To validate the feasibility and viability of a new idea or concept", "topic": "Assignment 10: Creative Thinking, Analogies & Prototyping", "expl": "Correct Answer: A) To validate the feasibility and viability of a new idea or concept"}, {"id": "incu_asg10_q07", "asg": 10, "q_num": 7, "q": "What does prototyping aim to achieve in the design process?", "opts": {"A": "Finalizing the design for immediate market release", "B": "Creating models to test and improve design, functionality, and usability", "C": "Building large-scale production units for market distribution", "D": "Avoiding iterative development to save time"}, "ans": ["B"], "ans_text": "Creating models to test and improve design, functionality, and usability", "topic": "Assignment 10: Creative Thinking, Analogies & Prototyping", "expl": "Correct Answer: B) Creating models to test and improve design, functionality, and usability"}, {"id": "incu_asg10_q08", "asg": 10, "q_num": 8, "q": "What is the primary goal of Synectics in the design process?", "opts": {"A": "Encouraging exploration and breaking conventional thinking", "B": "Generating a single, perfect solution to a problem", "C": "Reaching consensus among team members quickly", "D": "Applying detailed technical analysis to refine existing concepts"}, "ans": ["A"], "ans_text": "Encouraging exploration and breaking conventional thinking", "topic": "Assignment 10: Creative Thinking, Analogies & Prototyping", "expl": "Correct Answer: A) Encouraging exploration and breaking conventional thinking"}, {"id": "incu_asg10_q09", "asg": 10, "q_num": 9, "q": "How can entrepreneurs effectively collaborate with one another?", "opts": {"A": "By franchising their mutual businesses", "B": "By sharing resources and distributing production responsibilities", "C": "By competing in the same market segments", "D": "All of the above"}, "ans": ["B"], "ans_text": "By sharing resources and distributing production responsibilities", "topic": "Assignment 10: Creative Thinking, Analogies & Prototyping", "expl": "Correct Answer: B) By sharing resources and distributing production responsibilities"}, {"id": "incu_asg10_q10", "asg": 10, "q_num": 10, "q": "Why is it important for designers to create prototypes before deploying a product?", "opts": {"A": "To identify and resolve design flaws early in the process", "B": "To use prototypes as the final version for market release", "C": "To skip the need for market research and testing", "D": "To focus on aesthetics without user input"}, "ans": ["A"], "ans_text": "To identify and resolve design flaws early in the process", "topic": "Assignment 10: Creative Thinking, Analogies & Prototyping", "expl": "Correct Answer: A) To identify and resolve design flaws early in the process"}, {"id": "incu_asg11_q01", "asg": 11, "q_num": 1, "q": "What is the most effective approach for developing products that meet the needs of specially-abled people?", "opts": {"A": "User-centered design", "B": "Exclusivity in design", "C": "Profit maximization", "D": "Reducing production costs"}, "ans": ["A"], "ans_text": "User-centered design", "topic": "Assignment 11: User-Centered Design & Assistive Technology", "expl": "Correct Answer: A) User-centered design"}, {"id": "incu_asg11_q02", "asg": 11, "q_num": 2, "q": "What are the two key aspects to focus on when developing a product using assistive technology?", "opts": {"A": "Promoting awareness about digital alternatives", "B": "Making users independent and fostering social integration", "C": "Redesigning existing products for the market", "D": "Creating exclusive and expensive solutions"}, "ans": ["B"], "ans_text": "Making users independent and fostering social integration", "topic": "Assignment 11: User-Centered Design & Assistive Technology", "expl": "Correct Answer: B) Making users independent and fostering social integration"}, {"id": "incu_asg11_q03", "asg": 11, "q_num": 3, "q": "What are the critical factors for a product to succeed in the market?", "opts": {"A": "Being trendy and common", "B": "Being relevant and differentiated", "C": "Being cheap and generic", "D": "Being expensive and complex"}, "ans": ["B"], "ans_text": "Being relevant and differentiated", "topic": "Assignment 11: User-Centered Design & Assistive Technology", "expl": "Correct Answer: B) Being relevant and differentiated"}, {"id": "incu_asg11_q04", "asg": 11, "q_num": 4, "q": "What should a startup offer to persuade investors or customers to invest in or purchase its product?", "opts": {"A": "An unrealistic guaranteed return on investment", "B": "A unique and differentiated service or product", "C": "A vague and unclear value proposition", "D": "A low-cost product with limited functionality"}, "ans": ["B"], "ans_text": "A unique and differentiated service or product", "topic": "Assignment 11: User-Centered Design & Assistive Technology", "expl": "Correct Answer: B) A unique and differentiated service or product"}, {"id": "incu_asg11_q05", "asg": 11, "q_num": 5, "q": "Why is it advisable to avoid using cheap materials when developing a product, especially in a B2C context?", "opts": {"A": "Cheap materials reduce production time significantly", "B": "Using cheap materials increases return and servicing costs", "C": "Cheap materials ensure better brand reputation", "D": "Cheap materials improve the product's aesthetic appeal"}, "ans": ["B"], "ans_text": "Using cheap materials increases return and servicing costs", "topic": "Assignment 11: User-Centered Design & Assistive Technology", "expl": "Correct Answer: B) Using cheap materials increases return and servicing costs"}, {"id": "incu_asg11_q06", "asg": 11, "q_num": 6, "q": "What potential risk factor could affect the viability of a startup's business model?", "opts": {"A": "Strong customer loyalty and retention", "B": "Reliance on a limited number of corporate clients", "C": "Rapidly decreasing operational costs", "D": "Established brand recognition"}, "ans": ["B"], "ans_text": "Reliance on a limited number of corporate clients", "topic": "Assignment 11: User-Centered Design & Assistive Technology", "expl": "Correct Answer: B) Reliance on a limited number of corporate clients"}, {"id": "incu_asg11_q07", "asg": 11, "q_num": 7, "q": "How does human-to-human interaction benefit product design compare to AI-based solutions?", "opts": {"A": "AI processes designs faster and more efficiently", "B": "Human interaction fosters empathy and understanding of individual needs", "C": "AI consistently improves through machine learning", "D": "AI offers a broader range of design capabilities"}, "ans": ["B"], "ans_text": "Human interaction fosters empathy and understanding of individual needs", "topic": "Assignment 11: User-Centered Design & Assistive Technology", "expl": "Correct Answer: B) Human interaction fosters empathy and understanding of individual needs"}, {"id": "incu_asg11_q08", "asg": 11, "q_num": 8, "q": "How can design contribute to the development of cognitive, motor, and analytical skills in children?", "opts": {"A": "By creating interactive games that encourage physical movement and coordination", "B": "By focusing solely on aesthetic appeal and trendy designs", "C": "By using advanced technology for entertainment purposes", "D": "By emphasizing cost-effectiveness over engagement"}, "ans": ["A"], "ans_text": "By creating interactive games that encourage physical movement and coordination", "topic": "Assignment 11: User-Centered Design & Assistive Technology", "expl": "Correct Answer: A) By creating interactive games that encourage physical movement and coordination"}, {"id": "incu_asg11_q09", "asg": 11, "q_num": 9, "q": "What factors should be prioritized when developing a product using evidence-based learning methodologies?", "opts": {"A": "Understanding target customers and measuring the impact of the solution", "B": "Increasing brand recognition and analyzing market competition", "C": "Allocating advertising budgets and determining technical specifications", "D": "Designing packaging and setting product pricing"}, "ans": ["A"], "ans_text": "Understanding target customers and measuring the impact of the solution", "topic": "Assignment 11: User-Centered Design & Assistive Technology", "expl": "Correct Answer: A) Understanding target customers and measuring the impact of the solution"}, {"id": "incu_asg11_q10", "asg": 11, "q_num": 10, "q": "Why is it essential for a product to align with customer needs and preferences during its design?", "opts": {"A": "To reduce the cost of production", "B": "To ensure long-term customer satisfaction and loyalty", "C": "To focus on marketing trends exclusively", "D": "To simplify the manufacturing process"}, "ans": ["B"], "ans_text": "To ensure long-term customer satisfaction and loyalty", "topic": "Assignment 11: User-Centered Design & Assistive Technology", "expl": "Correct Answer: B) To ensure long-term customer satisfaction and loyalty"}, {"id": "incu_asg12_q01", "asg": 12, "q_num": 1, "q": "How does identifying problems early in the product design process help businesses?", "opts": {"A": "Leads to overemphasis on a single issue", "B": "Provides a well-defined direction for development", "C": "Assumes problems remain static throughout the process", "D": "Overlooks user insights during the design phase"}, "ans": ["B"], "ans_text": "Provides a well-defined direction for development", "topic": "Assignment 12: Product Strategy, Beachhead Markets & Pitching", "expl": "Correct Answer: B) Provides a well-defined direction for development"}, {"id": "incu_asg12_q02", "asg": 12, "q_num": 2, "q": "What are the benefits of designing modular and customizable products?", "opts": {"A": "Increased customer satisfaction and enhanced efficiency", "B": "Higher production costs and limited scalability", "C": "Reduced customer engagement and feedback opportunities", "D": "Simplified designs with minimal user options"}, "ans": ["A"], "ans_text": "Increased customer satisfaction and enhanced efficiency", "topic": "Assignment 12: Product Strategy, Beachhead Markets & Pitching", "expl": "Correct Answer: A) Increased customer satisfaction and enhanced efficiency"}, {"id": "incu_asg12_q03", "asg": 12, "q_num": 3, "q": "How does analyzing a \"Beachhead market\" help businesses during product launch?", "opts": {"A": "Spreads resources thinly across multiple segments", "B": "Identifies a focused customer segment for initial success", "C": "Skips customer research and prioritizes production", "D": "Avoids market segmentation entirely"}, "ans": ["B"], "ans_text": "Identifies a focused customer segment for initial success", "topic": "Assignment 12: Product Strategy, Beachhead Markets & Pitching", "expl": "Correct Answer: B) Identifies a focused customer segment for initial success"}, {"id": "incu_asg12_q04", "asg": 12, "q_num": 4, "q": "How can networking be utilized effectively to harness its full potential?", "opts": {"A": "Limiting interactions to close friends only", "B": "Promoting products through targeted connections", "C": "Avoiding industry events and conferences", "D": "Keeping networking efforts informal and unstructured"}, "ans": ["B"], "ans_text": "Promoting products through targeted connections", "topic": "Assignment 12: Product Strategy, Beachhead Markets & Pitching", "expl": "Correct Answer: B) Promoting products through targeted connections"}, {"id": "incu_asg12_q05", "asg": 12, "q_num": 5, "q": "What are the advantages of the \"Inverted Pyramid Model\" for product-centric businesses?", "opts": {"A": "Increased development costs due to complex designs", "B": "Improved customer focus by prioritizing their needs", "C": "Creation of complex product descriptions for a wider audience", "D": "Prioritizing concise messaging with a clear audience focus"}, "ans": ["B"], "ans_text": "Improved customer focus by prioritizing their needs", "topic": "Assignment 12: Product Strategy, Beachhead Markets & Pitching", "expl": "Correct Answer: B) Improved customer focus by prioritizing their needs"}, {"id": "incu_asg12_q06", "asg": 12, "q_num": 6, "q": "What is the most crucial step in the product design process to ensure a startup's success?", "opts": {"A": "Identifying the target customer segment", "B": "Ignoring user feedback during early stages", "C": "Skipping competitor analysis to save time", "D": "Overlooking market research to focus on production"}, "ans": ["A"], "ans_text": "Identifying the target customer segment", "topic": "Assignment 12: Product Strategy, Beachhead Markets & Pitching", "expl": "Correct Answer: A) Identifying the target customer segment"}, {"id": "incu_asg12_q07", "asg": 12, "q_num": 7, "q": "What is considered an ideal marketing strategy for startups?", "opts": {"A": "Expensive and extravagant campaigns", "B": "Short-term and aggressive advertising", "C": "Innovative and lean strategies", "D": "Random and unfocused marketing efforts"}, "ans": ["C"], "ans_text": "Innovative and lean strategies", "topic": "Assignment 12: Product Strategy, Beachhead Markets & Pitching", "expl": "Correct Answer: C) Innovative and lean strategies"}, {"id": "incu_asg12_q08", "asg": 12, "q_num": 8, "q": "What factors should be prioritized when designing a product for the market?", "opts": {"A": "Irrelevant personal opinions and preferences", "B": "Customer needs and preferences", "C": "Excessive technical details and low usability", "D": "Low-impact trends to reduce risks"}, "ans": ["B"], "ans_text": "Customer needs and preferences", "topic": "Assignment 12: Product Strategy, Beachhead Markets & Pitching", "expl": "Correct Answer: B) Customer needs and preferences"}, {"id": "incu_asg12_q09", "asg": 12, "q_num": 9, "q": "Why is it important to emphasize the product solution when presenting a business idea?", "opts": {"A": "To focus on irrelevant features for market differentiation", "B": "To overemphasize minor market segments", "C": "To provide clarity on how the product addresses a specific problem", "D": "To focus on overambitious goals for investor appeal"}, "ans": ["C"], "ans_text": "To provide clarity on how the product addresses a specific problem", "topic": "Assignment 12: Product Strategy, Beachhead Markets & Pitching", "expl": "Correct Answer: C) To provide clarity on how the product addresses a specific problem"}, {"id": "incu_asg12_q10", "asg": 12, "q_num": 10, "q": "What is an essential factor to focus on when pitching a business idea to investors?", "opts": {"A": "Presenting a vague and unclear concept", "B": "Avoiding discussions about market potential", "C": "Clearly articulating the value proposition and market fit", "D": "Presenting weak financial projections to lower expectations"}, "ans": ["C"], "ans_text": "Clearly articulating the value proposition and market fit", "topic": "Assignment 12: Product Strategy, Beachhead Markets & Pitching", "expl": "Correct Answer: C) Clearly articulating the value proposition and market fit"}];
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+const load = (k, d) => {
+  try {
+    const val = localStorage.getItem(k);
+    return val !== null ? JSON.parse(val) : d;
+  } catch (e) {
+    return d;
+  }
+};
+
+const save = (k, v) => {
+  try {
+    localStorage.setItem(k, JSON.stringify(v));
+  } catch (e) {
+    console.error('Storage save error', e);
+  }
+};
+
+// Initialize State
+let Q = load(KEY_Q, null);
+if (!Q || !Array.isArray(Q) || Q.length === 0) {
+  Q = DEFAULT_QUESTIONS;
+  save(KEY_Q, Q);
+}
+
+let S = load(KEY_S, {});
+let STARS = new Set(load(KEY_STARS, []));
+let autoAdvanceEnabled = load(KEY_AUTO, true);
+let autoAdvanceDelay = load(KEY_DELAY, 1200); // 1.2s default
+
+let session = null;
+let page = 'home';
+let autoTimer = null;
+let autoPaused = false;
+
+// Helpers
+const el = (tag, attrs = {}, ...children) => {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k.startsWith('on') && typeof v === 'function') node[k] = v;
+    else if (k === 'class') node.className = v;
+    else if (k === 'style') node.style.cssText = v;
+    else if (v !== null && v !== undefined && v !== false) node.setAttribute(k, v === true ? '' : v);
+  }
+  for (const child of children) {
+    if (child === null || child === undefined || child === false) continue;
+    if (Array.isArray(child)) child.forEach(c => c && node.append(c));
+    else node.append(typeof child === 'string' || typeof child === 'number' ? document.createTextNode(child) : child);
+  }
+  return node;
+};
+
+const st = id => S[id] || { a: 0, c: 0, streak: 0, last: null, t: 0 };
+const isNew = id => st(id).a === 0;
+const isWeak = id => {
+  const s = st(id);
+  return s.a > 0 && (s.c / s.a < 0.6 || (s.a - s.c >= 2) || s.last === false);
+};
+const isMastered = id => {
+  const s = st(id);
+  return s.a >= 2 && s.streak >= 2 && (s.c / s.a >= 0.8);
+};
+const pct = (c, a) => a ? Math.round((c / a) * 100) : 0;
+const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
+
+const updateBadges = () => {
+  const weakCount = Q.filter(x => isWeak(x.id)).length;
+  const wb = $('#weakBadge');
+  if (wb) {
+    wb.textContent = weakCount;
+    wb.style.display = weakCount ? 'inline-block' : 'none';
+  }
+  const sb = $('#starBadge');
+  if (sb) {
+    sb.textContent = STARS.size;
+    sb.style.display = STARS.size ? 'inline-block' : 'none';
+  }
+};
+
+const toggleStar = (id) => {
+  if (STARS.has(id)) STARS.delete(id);
+  else STARS.add(id);
+  save(KEY_STARS, [...STARS]);
+  updateBadges();
+  render();
+};
+
+/* Session handling */
+function startSession(mode, topic = '', countLimit = 0, autoAdvance = null) {
+  if (autoTimer) { clearTimeout(autoTimer); autoTimer = null; }
+  autoPaused = false;
+  if (autoAdvance !== null) {
+    autoAdvanceEnabled = autoAdvance;
+    save(KEY_AUTO, autoAdvanceEnabled);
+  }
+
+  let pool = Q.filter(x => !topic || x.topic === topic);
+  if (!pool.length) {
+    alert('No questions match this selection.');
+    return;
+  }
+
+  if (mode === 'weak') {
+    pool = pool.filter(x => isWeak(x.id)).sort((a, b) => (st(b.id).a - st(b.id).c) - (st(a.id).a - st(a.id).c));
+    if (!pool.length) {
+      alert('No weak questions yet in this category! Practice more questions to build your weak list.');
+      return;
+    }
+  } else if (mode === 'new') {
+    pool = shuffle(pool.filter(x => isNew(x.id)));
+    if (!pool.length) {
+      alert('All questions in this selection have been attempted! Try "Smart Mix" or "All Questions".');
+      return;
+    }
+  } else if (mode === 'starred') {
+    pool = pool.filter(x => STARS.has(x.id));
+    if (!pool.length) {
+      alert('No starred questions yet! Use the ⭐ button on any question to bookmark it.');
+      return;
+    }
+    pool = shuffle(pool);
+  } else if (mode === 'smart' || mode === 'rapid') {
+    const w = shuffle(pool.filter(x => isWeak(x.id)));
+    const n = shuffle(pool.filter(x => isNew(x.id)));
+    const r = shuffle(pool.filter(x => !isWeak(x.id) && !isNew(x.id)));
+    pool = [...w, ...n, ...r];
+  } else {
+    pool = shuffle(pool);
+  }
+
+  if (countLimit > 0 && pool.length > countLimit) {
+    pool = pool.slice(0, countLimit);
+  }
+
+  session = {
+    queue: pool.map(x => x.id),
+    i: 0,
+    answered: null, // null while answering; array of picked letters once submitted
+    selected: new Set(), // set of chosen letters for multi-select
+    results: [],
+    mode,
+    topic,
+    startTime: Date.now()
+  };
+  render();
+}
+
+// Single-choice answer
+function answerSingle(letter) {
+  if (!session || session.answered) return;
+  const q = Q.find(x => x.id === session.queue[session.i]);
+  if (!q) return;
+
+  const letterUpper = letter.toUpperCase();
+  const correctKeys = Array.isArray(q.ans) ? q.ans : [q.ans];
+  const ok = correctKeys.includes(letterUpper);
+
+  session.answered = [letterUpper];
+  session.results.push({ id: q.id, picked: [letterUpper], ok });
+
+  const s = st(q.id);
+  S[q.id] = {
+    a: s.a + 1,
+    c: s.c + (ok ? 1 : 0),
+    streak: ok ? s.streak + 1 : 0,
+    last: ok,
+    t: Date.now()
+  };
+  save(KEY_S, S);
+  updateBadges();
+  render();
+
+  if (autoAdvanceEnabled && !autoPaused) {
+    triggerAutoAdvance();
+  }
+}
+
+// Toggle multi-select option
+function toggleMultiOption(letter) {
+  if (!session || session.answered) return;
+  const letterUpper = letter.toUpperCase();
+  if (session.selected.has(letterUpper)) {
+    session.selected.delete(letterUpper);
+  } else {
+    session.selected.add(letterUpper);
+  }
+  render();
+}
+
+// Submit multi-select answer
+function submitMulti() {
+  if (!session || session.answered || session.selected.size === 0) return;
+  const q = Q.find(x => x.id === session.queue[session.i]);
+  if (!q) return;
+
+  const picked = [...session.selected].sort();
+  const correctKeys = [...(Array.isArray(q.ans) ? q.ans : [q.ans])].sort();
+
+  // Full match requirement: Must select ALL correct options and NO wrong ones!
+  const ok = picked.length === correctKeys.length && picked.every((val, idx) => val === correctKeys[idx]);
+
+  session.answered = picked;
+  session.results.push({ id: q.id, picked, ok });
+
+  const s = st(q.id);
+  S[q.id] = {
+    a: s.a + 1,
+    c: s.c + (ok ? 1 : 0),
+    streak: ok ? s.streak + 1 : 0,
+    last: ok,
+    t: Date.now()
+  };
+  save(KEY_S, S);
+  updateBadges();
+  render();
+
+  if (autoAdvanceEnabled && !autoPaused) {
+    triggerAutoAdvance();
+  }
+}
+
+function triggerAutoAdvance() {
+  if (autoTimer) clearTimeout(autoTimer);
+  const fill = $('.auto-advance-fill');
+  if (fill) {
+    fill.style.transition = 'none';
+    fill.style.width = '0%';
+    requestAnimationFrame(() => {
+      fill.style.transition = `width ${autoAdvanceDelay}ms linear`;
+      fill.style.width = '100%';
+    });
+  }
+
+  autoTimer = setTimeout(() => {
+    if (!autoPaused && session && session.answered) {
+      next();
+    }
+  }, autoAdvanceDelay);
+}
+
+function pauseAutoAdvance() {
+  autoPaused = true;
+  if (autoTimer) { clearTimeout(autoTimer); autoTimer = null; }
+  const fill = $('.auto-advance-fill');
+  if (fill) fill.style.width = '0%';
+  render();
+}
+
+function resumeAutoAdvance() {
+  autoPaused = false;
+  triggerAutoAdvance();
+  render();
+}
+
+function next() {
+  if (!session) return;
+  if (autoTimer) { clearTimeout(autoTimer); autoTimer = null; }
+  autoPaused = false;
+  session.i++;
+  session.answered = null;
+  session.selected = new Set();
+  render();
+}
+
+/* Views */
+function viewHome() {
+  const total = Q.length;
+  const attempted = Q.filter(x => st(x.id).a > 0).length;
+  const weak = Q.filter(x => isWeak(x.id)).length;
+  const mastered = Q.filter(x => isMastered(x.id)).length;
+  let totalA = 0, totalC = 0;
+  for (const x of Q) {
+    totalA += st(x.id).a;
+    totalC += st(x.id).c;
+  }
+
+  const v = el('div');
+
+  // Stats Card
+  const statsGrid = el('div', { class: 'stats' },
+    el('div', { class: 'stat' }, el('b', {}, String(total)), el('span', {}, 'Total Questions')),
+    el('div', { class: 'stat' }, el('b', { style: 'color:var(--ok)' }, String(mastered)), el('span', {}, 'Mastered')),
+    el('div', { class: 'stat' }, el('b', { style: 'color:var(--bad)' }, String(weak)), el('span', {}, 'Weak Questions')),
+    el('div', { class: 'stat' }, el('b', {}, `${attempted}/${total}`), el('span', {}, 'Attempted')),
+    el('div', { class: 'stat' }, el('b', { class: 'pct' }, `${pct(totalC, totalA)}%`), el('span', {}, 'Overall Accuracy'))
+  );
+  v.append(statsGrid);
+
+  // Practice Card
+  const topics = [...new Set(Q.map(x => x.topic))].sort();
+  const selTopic = el('select', { id: 'selTopic', style: 'flex:1;min-width:200px' },
+    el('option', { value: '' }, `All Topics (${total} Questions)`),
+    ...topics.map(t => {
+      const cnt = Q.filter(x => x.topic === t).length;
+      return el('option', { value: t }, `${t} (${cnt} Qs)`);
+    })
+  );
+
+  const selCount = el('select', { id: 'selCount', style: 'width:140px' },
+    el('option', { value: '0' }, 'All available'),
+    el('option', { value: '10' }, '10 Questions'),
+    el('option', { value: '20' }, '20 Questions'),
+    el('option', { value: '5' }, '5 Quick Qs')
+  );
+
+  const selDelay = el('select', { id: 'selDelay', style: 'width:125px' },
+    el('option', { value: '800', ...(autoAdvanceDelay === 800 ? { selected: true } : {}) }, '0.8s (Fast)'),
+    el('option', { value: '1200', ...(autoAdvanceDelay === 1200 ? { selected: true } : {}) }, '1.2s (Normal)'),
+    el('option', { value: '2000', ...(autoAdvanceDelay === 2000 ? { selected: true } : {}) }, '2.0s (Relaxed)')
+  );
+  selDelay.onchange = () => {
+    autoAdvanceDelay = parseInt(selDelay.value, 10);
+    save(KEY_DELAY, autoAdvanceDelay);
+  };
+
+  const getParams = () => ({
+    topic: selTopic.value,
+    count: parseInt(selCount.value, 10) || 0
+  });
+
+  const practiceCard = el('div', { class: 'card' },
+    el('div', { style: 'display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px' },
+      el('b', { style: 'font-size:17px' }, 'Start Practice Session'),
+      el('div', { class: 'row', style: 'gap:8px' },
+        el('label', { class: 'toggle-switch', title: 'Automatically move to next question after picking an answer' },
+          el('input', {
+            type: 'checkbox',
+            checked: autoAdvanceEnabled,
+            onchange: e => {
+              autoAdvanceEnabled = e.target.checked;
+              save(KEY_AUTO, autoAdvanceEnabled);
+            }
+          }),
+          el('div', { class: 'toggle-track' }, el('div', { class: 'toggle-thumb' })),
+          el('span', { style: 'font-weight:600' }, '⏱️ Auto-advance')
+        ),
+        selDelay
+      )
+    ),
+    el('div', { class: 'row', style: 'margin-bottom:14px' },
+      el('span', { class: 'mute', style: 'font-size:14px;font-weight:600' }, 'Topic:'),
+      selTopic,
+      el('span', { class: 'mute', style: 'font-size:14px;font-weight:600' }, 'Count:'),
+      selCount
+    ),
+    el('div', { class: 'modes' },
+      // Rapid Revision Mode
+      el('button', {
+        class: 'mode primary',
+        onclick: () => { const p = getParams(); startSession('rapid', p.topic, p.count, true); }
+      },
+        el('div', {},
+          el('b', {}, '⚡ Rapid Revision Mode (Auto-Advance)'),
+          el('small', {}, 'Rapid testing — reveals answers & auto-advances after a slight delay (~1.2s)')
+        ),
+        el('span', { style: 'font-size:22px' }, '⏩')
+      ),
+      el('button', {
+        class: 'mode',
+        onclick: () => { const p = getParams(); startSession('smart', p.topic, p.count, false); }
+      },
+        el('div', {},
+          el('b', {}, '🎯 Smart Mix (Standard Click-to-Next)'),
+          el('small', {}, 'Prioritizes weak questions, then unattempted, then review')
+        ),
+        el('span', { style: 'font-size:20px;color:var(--mute)' }, '→')
+      ),
+      el('button', {
+        class: 'mode',
+        onclick: () => { const p = getParams(); startSession('all', p.topic, p.count); }
+      },
+        el('div', {},
+          el('b', {}, '🎲 All Questions (Randomized)'),
+          el('small', {}, 'Full shuffled practice across selected scope')
+        ),
+        el('span', { style: 'font-size:20px;color:var(--mute)' }, '→')
+      ),
+      el('button', {
+        class: 'mode',
+        onclick: () => { const p = getParams(); startSession('weak', p.topic, p.count); }
+      },
+        el('div', {},
+          el('b', {}, `⚠️ Weak Only (${weak} total)`),
+          el('small', {}, 'Target questions you have missed or have low accuracy on')
+        ),
+        el('span', { style: 'font-size:20px;color:var(--mute)' }, '→')
+      ),
+      el('button', {
+        class: 'mode',
+        onclick: () => { const p = getParams(); startSession('new', p.topic, p.count); }
+      },
+        el('div', {},
+          el('b', {}, `✨ New / Unseen Questions (${total - attempted} unattempted)`),
+          el('small', {}, 'Practice questions you have not answered yet')
+        ),
+        el('span', { style: 'font-size:20px;color:var(--mute)' }, '→')
+      ),
+      STARS.size > 0 ? el('button', {
+        class: 'mode',
+        onclick: () => { const p = getParams(); startSession('starred', p.topic, p.count); }
+      },
+        el('div', {},
+          el('b', {}, `⭐ Starred Questions (${STARS.size} bookmarked)`),
+          el('small', {}, 'Practice your bookmarked revision questions')
+        ),
+        el('span', { style: 'font-size:20px;color:var(--star)' }, '★')
+      ) : null
+    )
+  );
+  v.append(practiceCard);
+
+  // Topic Breakdown Table
+  const topicRows = topics.map(t => {
+    const qs = Q.filter(x => x.topic === t);
+    let a = 0, c = 0;
+    qs.forEach(x => { a += st(x.id).a; c += st(x.id).c; });
+    const w = qs.filter(x => isWeak(x.id)).length;
+    return {
+      topic: t,
+      total: qs.length,
+      attempted: qs.filter(x => st(x.id).a > 0).length,
+      accuracy: pct(c, a),
+      weak: w
+    };
+  });
+
+  const tableCard = el('div', { class: 'card' },
+    el('div', { style: 'display:flex;justify-content:space-between;align-items:center' },
+      el('b', { style: 'font-size:16px' }, 'Module Breakdown (Assignments 1 to 12)'),
+      el('span', { class: 'mute', style: 'font-size:13px' }, `${topics.length} Assignments`)
+    ),
+    el('div', { class: 'table-wrap' },
+      el('table', {},
+        el('thead', {},
+          el('tr', {},
+            el('th', {}, 'Assignment / Module'),
+            el('th', { style: 'text-align:center' }, 'Qs'),
+            el('th', { style: 'text-align:center' }, 'Progress'),
+            el('th', { style: 'text-align:center' }, 'Accuracy'),
+            el('th', { style: 'text-align:center' }, 'Weak'),
+            el('th', { style: 'text-align:right' }, 'Action')
+          )
+        ),
+        el('tbody', {},
+          ...topicRows.map(row => el('tr', {},
+            el('td', { style: 'font-weight:600' }, row.topic),
+            el('td', { style: 'text-align:center;color:var(--mute)' }, String(row.total)),
+            el('td', { style: 'text-align:center' }, `${row.attempted}/${row.total}`),
+            el('td', { style: 'text-align:center' }, row.attempted > 0 ? el('span', { class: 'pct' }, `${row.accuracy}%`) : el('span', { class: 'mute' }, '—')),
+            el('td', { style: 'text-align:center' }, row.weak > 0 ? el('span', { class: 'tag weak' }, `${row.weak}`) : el('span', { class: 'mute' }, '0')),
+            el('td', { style: 'text-align:right' },
+              el('button', {
+                class: 'btn-sm primary',
+                onclick: () => startSession('smart', row.topic, 0)
+              }, 'Practice')
+            )
+          ))
+        )
+      )
+    )
+  );
+  v.append(tableCard);
+
+  return v;
+}
+
+function viewQuiz() {
+  const v = el('div');
+
+  // Completed Session Screen
+  if (session.i >= session.queue.length) {
+    if (autoTimer) { clearTimeout(autoTimer); autoTimer = null; }
+    const results = session.results;
+    const correctCount = results.filter(x => x.ok).length;
+    const missed = results.filter(x => !x.ok);
+    const scorePct = pct(correctCount, results.length);
+
+    let congratText = 'Keep revising to master these concepts!';
+    if (scorePct === 100) congratText = '🌟 Perfect Score! Flawless recall on all questions!';
+    else if (scorePct >= 80) congratText = '🎉 Excellent Performance! Solid understanding of the material!';
+    else if (scorePct >= 60) congratText = '👍 Good attempt! Review the missed questions below to strengthen recall.';
+
+    const finishCard = el('div', { class: 'card', style: 'text-align:center;padding:30px 20px' },
+      el('h2', { style: 'margin:0 0 6px' }, 'Session Completed'),
+      el('p', { class: 'mute', style: 'margin:0 0 16px' }, congratText),
+      el('div', { class: 'score-circle' },
+        el('span', { class: 'score-num' }, `${scorePct}%`),
+        el('span', { class: 'score-label' }, `${correctCount}/${results.length} Correct`)
+      ),
+      el('div', { class: 'row', style: 'justify-content:center;gap:12px;margin:20px 0 10px' },
+        missed.length ? el('button', {
+          class: 'primary',
+          onclick: () => {
+            session = {
+              queue: shuffle(missed.map(m => m.id)),
+              i: 0,
+              answered: null,
+              selected: new Set(),
+              results: [],
+              mode: 'retry',
+              topic: session.topic,
+              startTime: Date.now()
+            };
+            render();
+          }
+        }, `🔄 Retry Missed (${missed.length})`) : null,
+        el('button', {
+          onclick: () => startSession(session.mode, session.topic, 0)
+        }, '🔁 Practice Again'),
+        el('button', {
+          onclick: () => { session = null; render(); }
+        }, '🏠 Back Home')
+      )
+    );
+    v.append(finishCard);
+
+    if (missed.length) {
+      const missedCard = el('div', { class: 'card' },
+        el('b', { style: 'font-size:16px;color:var(--bad)' }, `Review Missed Questions (${missed.length})`),
+        el('div', { style: 'display:flex;flex-direction:column;gap:14px;margin-top:14px' },
+          ...missed.map(m => {
+            const q = Q.find(x => x.id === m.id);
+            if (!q) return null;
+            const correctKeys = Array.isArray(q.ans) ? q.ans : [q.ans];
+            const correctText = correctKeys.map(k => `${k}) ${q.opts[k] || ''}`).join('; ');
+            const pickedArr = Array.isArray(m.picked) ? m.picked : [m.picked];
+            const pickedText = pickedArr.length ? pickedArr.map(k => `${k}) ${q.opts[k] || ''}`).join('; ') : 'None';
+            return el('div', { class: 'expl', style: 'border-left-color:var(--bad);background:var(--badbg)' },
+              el('div', { class: 'meta', style: 'margin-bottom:4px' },
+                el('div', { class: 'meta-tags' },
+                  el('span', { class: 'tag topic' }, q.topic),
+                  correctKeys.length > 1 ? el('span', { class: 'tag multi' }, `Multiple Correct (${correctKeys.length})`) : null
+                ),
+                el('button', {
+                  class: 'star-btn' + (STARS.has(q.id) ? ' starred' : ''),
+                  title: 'Star question',
+                  onclick: () => toggleStar(q.id)
+                }, STARS.has(q.id) ? '★' : '☆')
+              ),
+              el('div', { style: 'font-weight:700;font-size:15px;margin-bottom:6px' }, q.q),
+              el('div', { style: 'color:var(--bad);font-weight:600' }, `Your answer: ${pickedText}`),
+              el('div', { style: 'color:var(--ok);font-weight:700;margin-top:2px' }, `Correct answer: ${correctText}`),
+              q.expl ? el('div', { style: 'margin-top:6px;font-size:13.5px;color:var(--ink)' }, `💡 ${q.expl}`) : null
+            );
+          })
+        )
+      );
+      v.append(missedCard);
+    }
+
+    return v;
+  }
+
+  // Active Question Card
+  const qId = session.queue[session.i];
+  const q = Q.find(x => x.id === qId);
+  if (!q) {
+    session = null;
+    return viewHome();
+  }
+
+  const ans = session.answered; // null or array of submitted option keys
+  const progressPct = Math.round(((session.i) / session.queue.length) * 100);
+  const isStarred = STARS.has(q.id);
+  const correctKeys = Array.isArray(q.ans) ? q.ans : [q.ans];
+  const isMulti = correctKeys.length > 1;
+
+  // Evaluation: user must have selected ALL correct options and NO incorrect ones
+  let isCorrect = false;
+  if (ans) {
+    const sortedAns = [...ans].sort();
+    const sortedCorrect = [...correctKeys].sort();
+    isCorrect = sortedAns.length === sortedCorrect.length && sortedAns.every((val, idx) => val === sortedCorrect[idx]);
+  }
+
+  const card = el('div', { class: 'card' },
+    // Meta header
+    el('div', { class: 'meta' },
+      el('div', { class: 'meta-tags' },
+        el('span', { class: 'tag topic' }, q.topic),
+        el('span', {}, `Question ${session.i + 1} of ${session.queue.length}`),
+        isMulti ? el('span', { class: 'tag multi' }, `☑️ Multiple Correct (${correctKeys.length} to select)`) : null,
+        autoAdvanceEnabled ? el('span', { class: 'tag auto' }, `⏱️ Auto-advance (${(autoAdvanceDelay/1000).toFixed(1)}s)`) : null
+      ),
+      el('div', { class: 'row', style: 'gap:6px' },
+        el('label', { class: 'toggle-switch', title: 'Toggle auto-advance' },
+          el('input', {
+            type: 'checkbox',
+            checked: autoAdvanceEnabled,
+            onchange: e => {
+              autoAdvanceEnabled = e.target.checked;
+              save(KEY_AUTO, autoAdvanceEnabled);
+              if (autoTimer) { clearTimeout(autoTimer); autoTimer = null; }
+              render();
+            }
+          }),
+          el('div', { class: 'toggle-track' }, el('div', { class: 'toggle-thumb' })),
+          el('span', { style: 'font-size:12px;color:var(--mute)' }, 'Auto-advance')
+        ),
+        el('button', {
+          class: 'star-btn' + (isStarred ? ' starred' : ''),
+          title: isStarred ? 'Unstar question' : 'Star question',
+          onclick: () => toggleStar(q.id)
+        }, isStarred ? '★' : '☆'),
+        el('button', {
+          class: 'btn-sm',
+          title: 'Quit session',
+          onclick: () => {
+            if (confirm('Leave current quiz session and return to home?')) {
+              if (autoTimer) { clearTimeout(autoTimer); autoTimer = null; }
+              session = null;
+              render();
+            }
+          }
+        }, '✕ Exit')
+      )
+    ),
+
+    // Progress Bar
+    el('div', { class: 'bar' }, el('i', { style: `width: ${progressPct}%` })),
+
+    // Question Text
+    el('div', { class: 'q' }, q.q),
+
+    // Instruction banner for multi-select
+    
+
+    // Options List
+    el('div', { class: 'opts' },
+      ...Object.keys(q.opts).sort().map(k => {
+        let cls = 'opt';
+        let iconText = '';
+        const isSelectedBeforeSubmit = session.selected.has(k);
+
+        if (!ans) {
+          // Waiting for user action
+          if (isMulti && isSelectedBeforeSubmit) {
+            cls += ' selected';
+          }
+        } else {
+          // Evaluated
+          const isUserPicked = ans.includes(k);
+          const isTarget = correctKeys.includes(k);
+
+          if (isTarget && isUserPicked) {
+            cls += ' right';
+            iconText = '✓ Correct';
+          } else if (!isTarget && isUserPicked) {
+            cls += ' wrong';
+            iconText = '✗ Wrong';
+          } else if (isTarget && !isUserPicked) {
+            cls += ' missed';
+            iconText = 'Missed';
+          }
+        }
+
+        return el('button', {
+          class: cls,
+          onclick: () => {
+            if (ans) return;
+            if (isMulti) {
+              toggleMultiOption(k);
+            } else {
+              answerSingle(k);
+            }
+          },
+          ...(ans ? { disabled: true } : {})
+        },
+          isMulti ? el('span', { class: 'chkbox' }, ans ? (correctKeys.includes(k) ? '✓' : (ans.includes(k) ? '✗' : '')) : (isSelectedBeforeSubmit ? '✓' : '')) : null,
+          el('span', { class: 'k' }, `${k})`),
+          el('span', { class: 'text' }, q.opts[k]),
+          el('span', { class: 'icon' }, iconText)
+        );
+      })
+    ),
+
+    // Multi-Select Submit Button (before answering)
+    isMulti && !ans ? el('div', { class: 'row', style: 'justify-content:space-between;align-items:center;margin-top:16px' },
+      el('span', { class: 'mute', style: 'font-size:13.5px' },
+        `${session.selected.size} of ${correctKeys.length} required options selected`
+      ),
+      el('button', {
+        class: 'primary',
+        disabled: session.selected.size === 0,
+        onclick: submitMulti
+      }, `Submit Answer (${session.selected.size} selected) ↵`)
+    ) : null,
+
+    // Explanation & Result banner (shown after answering)
+    ans ? el('div', { class: 'expl' },
+      el('b', {}, isCorrect
+        ? (isMulti ? `✓ Perfect! You selected all ${correctKeys.length} correct options!` : '✓ Correct!')
+        : (isMulti ? `✗ Incomplete / Incorrect (You selected: ${ans.join(', ') || 'None'})` : `✗ Incorrect (Correct: ${correctKeys.join(', ')})`)
+      ),
+      el('div', { style: 'margin-top:4px;font-weight:600' },
+        `All Required Options: ${correctKeys.map(k => `${k}) ${q.opts[k] || ''}`).join('; ')}`
+      ),
+      q.expl ? el('div', { style: 'margin-top:6px;font-size:13.5px;color:var(--ink)' }, q.expl) : null
+    ) : null,
+
+    // Auto-Advance countdown bar
+    (ans && autoAdvanceEnabled) ? el('div', { class: 'auto-advance-bar' },
+      el('div', { class: 'auto-advance-fill' }),
+      el('div', { class: 'auto-advance-content' },
+        el('span', {}, autoPaused ? '⏸️ Auto-advance paused. Review at your own pace.' : `⏱️ Advancing in ${(autoAdvanceDelay/1000).toFixed(1)}s...`),
+        el('div', { class: 'row', style: 'gap:6px' },
+          autoPaused ? el('button', { class: 'btn-sm primary', onclick: resumeAutoAdvance }, '▶️ Resume Auto-advance')
+                     : el('button', { class: 'btn-sm', onclick: pauseAutoAdvance }, '⏸️ Pause & Study'),
+          el('button', { class: 'btn-sm', onclick: next }, 'Next Now ↵')
+        )
+      )
+    ) : null,
+
+    // Bottom Action Row
+    el('div', { class: 'row', style: 'justify-content:space-between;margin-top:18px' },
+      el('div', { class: 'mute', style: 'font-size:13px' },
+        st(q.id).a > 0 ? `Your stats: ${st(q.id).c}/${st(q.id).a} correct` : 'First attempt'
+      ),
+      ans ? el('button', {
+        id: 'nextBtn',
+        class: 'primary',
+        onclick: next
+      }, session.i + 1 >= session.queue.length ? 'View Results 🏁' : 'Next Question ↵') : null
+    ),
+
+    // Keyboard Shortcuts Hint
+    el('div', { class: 'keyboard-hint' },
+      el('span', {}, el('span', { class: 'kbd' }, 'A'), el('span', { class: 'kbd' }, 'B'), el('span', { class: 'kbd' }, 'C'), el('span', { class: 'kbd' }, 'D'), isMulti && !ans ? ' to toggle options' : ' to answer'),
+      isMulti && !ans ? el('span', {}, el('span', { class: 'kbd' }, '↵ Enter'), ' to submit selection') : null,
+      ans ? el('span', {}, el('span', { class: 'kbd' }, 'Space'), ' to pause/resume auto-timer') : null,
+      ans ? el('span', {}, el('span', { class: 'kbd' }, '↵ Enter'), ' to advance') : null,
+      el('span', {}, el('span', { class: 'kbd' }, 'S'), ' to bookmark')
+    )
+  );
+
+  v.append(card);
+  return v;
+}
+
+function viewWeak() {
+  const list = Q.filter(x => st(x.id).a > 0 && isWeak(x.id))
+    .sort((a, b) => (st(b.id).a - st(b.id).c) - (st(a.id).a - st(a.id).c));
+
+  const v = el('div');
+  if (!list.length) {
+    v.append(el('div', { class: 'card', style: 'text-align:center;padding:36px 20px' },
+      el('div', { style: 'font-size:40px;margin-bottom:8px' }, '🎉'),
+      el('b', { style: 'font-size:18px' }, 'No weak questions!'),
+      el('p', { class: 'mute', style: 'margin:8px 0 16px' }, 'Any question you miss during quizzes will be collected here for targeted review.'),
+      el('button', { class: 'primary', onclick: () => go('home') }, 'Start Practicing')
+    ));
+    return v;
+  }
+
+  v.append(el('div', { class: 'card' },
+    el('div', { style: 'display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px' },
+      el('div', {},
+        el('b', { style: 'font-size:18px' }, `Questions to Strengthen (${list.length})`),
+        el('div', { class: 'mute', style: 'font-size:13px' }, 'Sorted by highest miss rate')
+      ),
+      el('button', {
+        class: 'primary',
+        onclick: () => startSession('weak', '', 0)
+      }, '⚡ Practice Weak Questions Now')
+    ),
+    el('div', { style: 'display:flex;flex-direction:column;gap:14px' },
+      ...list.map(x => {
+        const s = st(x.id);
+        const isStarred = STARS.has(x.id);
+        const correctKeys = Array.isArray(x.ans) ? x.ans : [x.ans];
+        const correctText = correctKeys.map(k => `${k}) ${x.opts[k] || ''}`).join('; ');
+        return el('div', { class: 'expl', style: 'background:var(--card);border:1px solid var(--line);border-left:4px solid var(--bad);border-radius:8px' },
+          el('div', { class: 'meta', style: 'margin-bottom:6px' },
+            el('div', { class: 'meta-tags' },
+              el('span', { class: 'tag weak' }, `${s.c}/${s.a} right (${pct(s.c, s.a)}%)`),
+              el('span', { class: 'tag topic' }, x.topic),
+              correctKeys.length > 1 ? el('span', { class: 'tag multi' }, `Multiple Correct (${correctKeys.length})`) : null
+            ),
+            el('button', {
+              class: 'star-btn' + (isStarred ? ' starred' : ''),
+              onclick: () => toggleStar(x.id)
+            }, isStarred ? '★' : '☆')
+          ),
+          el('div', { style: 'font-weight:700;font-size:15.5px;margin-bottom:6px' }, x.q),
+          el('div', { style: 'color:var(--ok);font-weight:600' }, `Correct Answer: ${correctText}`),
+          x.expl ? el('div', { class: 'mute', style: 'font-size:13.5px;margin-top:4px' }, `💡 ${x.expl}`) : null
+        );
+      })
+    )
+  ));
+  return v;
+}
+
+function viewStarred() {
+  const list = Q.filter(x => STARS.has(x.id));
+  const v = el('div');
+  if (!list.length) {
+    v.append(el('div', { class: 'card', style: 'text-align:center;padding:36px 20px' },
+      el('div', { style: 'font-size:40px;margin-bottom:8px' }, '⭐'),
+      el('b', { style: 'font-size:18px' }, 'No starred questions yet'),
+      el('p', { class: 'mute', style: 'margin:8px 0 16px' }, 'Click the star icon (☆) on any question to bookmark it for quick access anytime.'),
+      el('button', { class: 'primary', onclick: () => go('home') }, 'Go to Home')
+    ));
+    return v;
+  }
+
+  v.append(el('div', { class: 'card' },
+    el('div', { style: 'display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px' },
+      el('div', {},
+        el('b', { style: 'font-size:18px' }, `Starred Questions (${list.length})`),
+        el('div', { class: 'mute', style: 'font-size:13px' }, 'Your handpicked revision bookmarks')
+      ),
+      el('button', {
+        class: 'primary',
+        onclick: () => startSession('starred', '', 0)
+      }, '⭐ Practice Starred Questions')
+    ),
+    el('div', { style: 'display:flex;flex-direction:column;gap:14px' },
+      ...list.map(x => {
+        const s = st(x.id);
+        const correctKeys = Array.isArray(x.ans) ? x.ans : [x.ans];
+        const correctText = correctKeys.map(k => `${k}) ${x.opts[k] || ''}`).join('; ');
+        return el('div', { class: 'expl', style: 'background:var(--card);border:1px solid var(--line);border-left:4px solid var(--star);border-radius:8px' },
+          el('div', { class: 'meta', style: 'margin-bottom:6px' },
+            el('div', { class: 'meta-tags' },
+              el('span', { class: 'tag topic' }, x.topic),
+              correctKeys.length > 1 ? el('span', { class: 'tag multi' }, `Multiple Correct (${correctKeys.length})`) : null,
+              s.a > 0 ? el('span', { class: 'tag ' + (isWeak(x.id) ? 'weak' : 'ok') }, `${s.c}/${s.a} right`) : el('span', { class: 'tag' }, 'Unattempted')
+            ),
+            el('button', {
+              class: 'star-btn starred',
+              title: 'Remove star',
+              onclick: () => toggleStar(x.id)
+            }, '★')
+          ),
+          el('div', { style: 'font-weight:700;font-size:15.5px;margin-bottom:6px' }, x.q),
+          el('div', { style: 'color:var(--ok);font-weight:600' }, `Answer: ${correctText}`),
+          x.expl ? el('div', { class: 'mute', style: 'font-size:13.5px;margin-top:4px' }, `💡 ${x.expl}`) : null
+        );
+      })
+    )
+  ));
+  return v;
+}
+
+function parseTextQuestions(text) {
+  const out = [];
+  const errors = [];
+  let cur = null;
+
+  const flush = () => {
+    if (!cur) return;
+    const keys = Object.keys(cur.opts);
+    if (!cur.q || keys.length < 2 || !cur.ans.length) {
+      errors.push(`Skipped question: "${(cur.q || '').slice(0, 50)}..." (requires text, at least 2 options, and valid answer)`);
+    } else {
+      const simpleId = 'custom_' + Math.random().toString(36).substr(2, 9);
+      out.push({
+        id: simpleId,
+        q: cur.q.trim(),
+        opts: cur.opts,
+        ans: cur.ans,
+        topic: (cur.topic || 'General Innovation').trim(),
+        expl: (cur.expl || '').trim()
+      });
+    }
+    cur = null;
+  };
+
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line) continue;
+
+    let m;
+    if (m = line.match(/^(?:Q\s*\d*\s*[:.)]|\d+\s*[.)])\s*(.*)$/i)) {
+      flush();
+      cur = { q: m[1], opts: {}, ans: [], topic: 'General Innovation', expl: '' };
+    } else if (!cur) {
+      continue;
+    } else if (m = line.match(/^\(?([A-F])[.)]\s*(.*)$/i)) {
+      const k = m[1].toUpperCase();
+      cur.opts[k] = m[2];
+    } else if (m = line.match(/^ans(?:wer)?\s*[:\-]\s*(.*)$/i)) {
+      const rawAns = m[1].toUpperCase();
+      const letters = rawAns.match(/[A-F]/g);
+      if (letters) cur.ans = letters;
+    } else if (m = line.match(/^topic\s*[:\-]\s*(.*)$/i)) {
+      cur.topic = m[1];
+    } else if (m = line.match(/^(?:detailed solution|explanation|expl)\s*[:\-]\s*(.*)$/i)) {
+      cur.expl = m[1];
+    } else if (cur && !Object.keys(cur.opts).length && !cur.ans.length) {
+      cur.q += ' ' + line;
+    }
+  }
+  flush();
+  return { out, errors };
+}
+
+function addQuestions(list) {
+  const have = new Set(Q.map(x => x.q.toLowerCase().trim()));
+  let added = 0;
+  for (const x of list) {
+    if (!have.has(x.q.toLowerCase().trim())) {
+      Q.push(x);
+      have.add(x.q.toLowerCase().trim());
+      added++;
+    }
+  }
+  save(KEY_Q, Q);
+  return added;
+}
+
+function viewManage() {
+  const v = el('div');
+
+  const ta = el('textarea', {
+    placeholder: `Q: What makes an idea valuable even if it fails?\nA) Avoiding collaboration\nB) Gaining valuable lessons and insights\nC) Shifting focus immediately\nD) Disregarding accountability\nAnswer: B\nTopic: Assignment 01: Idea Valuation & Lean Startup Fundamentals\nExplanation: Failures provide essential learning for future iterations.`
+  });
+  const msg = el('div', { class: 'mute', style: 'margin-top:8px;font-size:13.5px;white-space:pre-wrap' });
+
+  const addCard = el('div', { class: 'card' },
+    el('b', { style: 'font-size:17px' }, 'Add Custom Questions'),
+    el('p', { class: 'mute', style: 'margin:4px 0 10px;font-size:13px' },
+      'Paste questions in standard format shown. Multiple questions can be separated by blank lines.'
+    ),
+    ta,
+    el('div', { class: 'row', style: 'margin-top:10px' },
+      el('button', {
+        class: 'primary',
+        onclick: () => {
+          const { out, errors } = parseTextQuestions(ta.value);
+          const added = addQuestions(out);
+          msg.textContent = `Successfully added ${added} question(s).` +
+            (out.length - added > 0 ? ` (${out.length - added} duplicate(s) skipped)` : '') +
+            (errors.length ? '\n' + errors.join('\n') : '');
+          if (added) {
+            ta.value = '';
+            render();
+          }
+        }
+      }, '➕ Parse & Add Questions'),
+      el('button', {
+        onclick: () => { ta.value = ''; msg.textContent = ''; }
+      }, 'Clear Input')
+    ),
+    msg
+  );
+  v.append(addCard);
+
+  // Backup & Storage Management Card
+  const fileInput = el('input', {
+    type: 'file',
+    accept: '.json',
+    style: 'display:none',
+    onchange: e => {
+      const f = e.target.files[0];
+      if (!f) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const data = JSON.parse(reader.result);
+          if (Array.isArray(data)) {
+            Q = data;
+          } else if (data.Q && Array.isArray(data.Q)) {
+            Q = data.Q;
+            if (data.S) S = data.S;
+            if (data.STARS) STARS = new Set(data.STARS);
+          } else {
+            throw new Error('Unrecognized JSON format');
+          }
+          save(KEY_Q, Q);
+          save(KEY_S, S);
+          save(KEY_STARS, [...STARS]);
+          alert(`Successfully imported ${Q.length} questions!`);
+          render();
+        } catch (err) {
+          alert('Error importing JSON: ' + err.message);
+        }
+      };
+      reader.readAsText(f);
+    }
+  });
+
+  const storageCard = el('div', { class: 'card' },
+    el('b', { style: 'font-size:17px' }, 'Data Backup & Reset'),
+    el('p', { class: 'mute', style: 'margin:4px 0 12px;font-size:13px' },
+      'Export question bank and practice history to a JSON file, or restore default course content.'
+    ),
+    fileInput,
+    el('div', { class: 'row' },
+      el('button', {
+        onclick: () => {
+          const blob = new Blob([JSON.stringify({ Q, S, STARS: [...STARS] }, null, 2)], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = el('a', { href: url, download: 'incu-quiz-backup.json' });
+          a.click();
+          URL.revokeObjectURL(url);
+        }
+      }, '📥 Export Backup (JSON)'),
+      el('button', {
+        onclick: () => fileInput.click()
+      }, '📤 Import Backup (JSON)'),
+      el('button', {
+        class: 'danger',
+        onclick: () => {
+          if (confirm('Reset all scores, attempts, and streaks? (Questions will not be deleted)')) {
+            S = {};
+            save(KEY_S, S);
+            render();
+          }
+        }
+      }, '🔄 Reset Scores'),
+      el('button', {
+        class: 'danger',
+        onclick: () => {
+          if (confirm('Restore the original 120 Innovation & Incubation questions?')) {
+            Q = DEFAULT_QUESTIONS;
+            save(KEY_Q, Q);
+            render();
+          }
+        }
+      }, '♻️ Restore Default 120 Questions')
+    )
+  );
+  v.append(storageCard);
+
+  // Question Explorer Card
+  const searchInput = el('input', {
+    type: 'search',
+    placeholder: 'Search questions by keyword...',
+    style: 'flex:1;min-width:220px'
+  });
+
+  const qListContainer = el('div', { style: 'margin-top:14px;display:flex;flex-direction:column;gap:10px' });
+
+  const renderQuestionList = (filter = '') => {
+    qListContainer.replaceChildren();
+    const query = filter.toLowerCase().trim();
+    const filtered = Q.filter(x => !query || x.q.toLowerCase().includes(query) || x.topic.toLowerCase().includes(query));
+
+    if (!filtered.length) {
+      qListContainer.append(el('div', { class: 'mute', style: 'padding:14px;text-align:center' }, 'No questions match your search.'));
+      return;
+    }
+
+    filtered.slice(0, 50).forEach(x => {
+      const correctKeys = Array.isArray(x.ans) ? x.ans : [x.ans];
+      const qRow = el('div', {
+        style: 'padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--card);display:flex;justify-content:space-between;align-items:flex-start;gap:12px'
+      },
+        el('div', { style: 'flex:1' },
+          el('div', { style: 'margin-bottom:4px' },
+            el('span', { class: 'tag topic' }, x.topic),
+            el('span', { class: 'tag ok', style: 'margin-left:4px' }, `Ans: ${correctKeys.join(', ')}`)
+          ),
+          el('div', { style: 'font-weight:600;font-size:14.5px' }, x.q)
+        ),
+        el('button', {
+          class: 'btn-sm danger',
+          title: 'Delete this question',
+          onclick: () => {
+            if (confirm(`Delete this question?\n\n"${x.q.slice(0, 60)}..."`)) {
+              Q = Q.filter(item => item.id !== x.id);
+              save(KEY_Q, Q);
+              renderQuestionList(searchInput.value);
+            }
+          }
+        }, '🗑 Delete')
+      );
+      qListContainer.append(qRow);
+    });
+
+    if (filtered.length > 50) {
+      qListContainer.append(el('div', { class: 'mute', style: 'text-align:center;font-size:13px;padding:8px' }, `Showing first 50 of ${filtered.length} questions.`));
+    }
+  };
+
+  searchInput.oninput = () => renderQuestionList(searchInput.value);
+
+  const explorerCard = el('div', { class: 'card' },
+    el('div', { style: 'display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px' },
+      el('b', { style: 'font-size:17px' }, `All Questions Bank (${Q.length})`),
+      searchInput
+    ),
+    qListContainer
+  );
+  v.append(explorerCard);
+
+  renderQuestionList();
+  return v;
+}
+
+/* Page Navigation */
+function go(p) {
+  if (autoTimer) { clearTimeout(autoTimer); autoTimer = null; }
+  page = p;
+  session = null;
+  $$('nav button.nav-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.go === p);
+  });
+  render();
+}
+
+function render() {
+  const root = $('#view');
+  root.replaceChildren();
+
+  if (session) {
+    root.append(viewQuiz());
+  } else if (page === 'weak') {
+    root.append(viewWeak());
+  } else if (page === 'starred') {
+    root.append(viewStarred());
+  } else if (page === 'manage') {
+    root.append(viewManage());
+  } else {
+    root.append(viewHome());
+  }
+
+  updateBadges();
+  window.scrollTo(0, 0);
+
+  const nb = $('#nextBtn');
+  if (nb && !autoAdvanceEnabled) nb.focus();
+}
+
+/* Theme Management */
+function initTheme() {
+  const currentTheme = localStorage.getItem(KEY_THEME) || 'auto';
+  applyTheme(currentTheme);
+
+  $('#themeToggle').onclick = () => {
+    const cur = document.documentElement.getAttribute('data-theme') || 'auto';
+    let nextTheme = 'light';
+    if (cur === 'light') nextTheme = 'dark';
+    else if (cur === 'dark') nextTheme = 'auto';
+    else nextTheme = 'light';
+
+    applyTheme(nextTheme);
+  };
+}
+
+function applyTheme(t) {
+  if (t === 'auto') {
+    document.documentElement.removeAttribute('data-theme');
+    $('#themeToggle').textContent = '🌓';
+  } else {
+    document.documentElement.setAttribute('data-theme', t);
+    $('#themeToggle').textContent = t === 'dark' ? '🌙' : '☀️';
+  }
+  localStorage.setItem(KEY_THEME, t);
+}
+
+/* Keyboard Navigation */
+window.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+  if (session) {
+    const k = e.key.toUpperCase();
+    const q = Q.find(x => x.id === session.queue[session.i]);
+    if (!q) return;
+    const isMulti = (Array.isArray(q.ans) ? q.ans : [q.ans]).length > 1;
+
+    if (!session.answered) {
+      if (q.opts[k]) {
+        e.preventDefault();
+        if (isMulti) {
+          toggleMultiOption(k);
+        } else {
+          answerSingle(k);
+        }
+      } else if (k === '1' && q.opts['A']) {
+        if (isMulti) toggleMultiOption('A'); else answerSingle('A');
+      } else if (k === '2' && q.opts['B']) {
+        if (isMulti) toggleMultiOption('B'); else answerSingle('B');
+      } else if (k === '3' && q.opts['C']) {
+        if (isMulti) toggleMultiOption('C'); else answerSingle('C');
+      } else if (k === '4' && q.opts['D']) {
+        if (isMulti) toggleMultiOption('D'); else answerSingle('D');
+      } else if (isMulti && e.key === 'Enter') {
+        e.preventDefault();
+        submitMulti();
+      } else if (k === 'S' || k === 'B') {
+        toggleStar(q.id);
+      }
+    } else {
+      if (e.key === ' ' || e.code === 'Space') {
+        e.preventDefault();
+        if (autoPaused) resumeAutoAdvance();
+        else pauseAutoAdvance();
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        next();
+      } else if (k === 'S' || k === 'B') {
+        toggleStar(q.id);
+      }
+    }
+  }
+});
+
+// Setup nav handlers
+$$('nav [data-go]').forEach(b => b.addEventListener('click', () => go(b.dataset.go)));
+
+// Initial boot
+initTheme();
+go('home');
+</script>
+</body>
+</html>
